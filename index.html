@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculateur de la solidité d’un mot de passe</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="mb">
+        <p class="logo" href="#">
+            <img src="./assets/Logo chien.png" alt="Logo">
+        </p>
+        <select id="languageSelect" aria-label="Sélection de la langue">
+            <option value="fr">Français</option>
+            <option value="en">English</option>
+            <option value="de">Deutsch</option>
+            <option value="sp">Spanish</option>
+            <option value="it">Italiano</option>
+            <option value="pt">Português</option>
+            <option value="nl">Nederlands</option>
+            <option value="br">Breton</option>
+        </select>
+    </header>
+    <div class="container">
+        <h1 data-i18n="title">Calculateur de la solidité d'un mot de passe</h1>
+        <label for="passwordInput" data-i18n="passwordLabel">
+            Mot de passe :
+        </label>
+        <div class="password-field" style="display:flex;gap:8px;align-items:center;">
+            <input
+                type="password"
+                id="passwordInput"
+                placeholder="Entrez votre mot de passe"
+                data-i18n-placeholder="passwordPlaceholder"
+                autocomplete="off">
+            <button
+                type="button"
+                id="togglePassword"
+                aria-pressed="false"
+                aria-label="Afficher le mot de passe"
+                style="background:none;border:0;padding:4px;cursor:pointer;display:inline-flex;align-items:center;color:#222">
+            </button>
+        </div>
+        <button id="checkButton" data-i18n="checkButton">
+            Vérifier la solidité
+        </button>
+        <div id="results"></div>
+    </div>
+    <figure>
+        <figcaption data-i18n="listenMusic">
+            Écoutez la musique :
+        </figcaption>
+        <audio controls src="./assets/Socal.mp3"></audio>
+    </figure>
+    <footer>
+        <p class="logo" href="#">
+            <img src="./assets/Logo chien.png" alt="Logo">
+        </p>
+        <nav class="sub-menu">
+            <ul>
+                <li><a href="https://github.com/MisterFreeze25" data-i18n="github">Mon GitHub</a></li>
+                <li><a href="legal.html" data-i18n="legalNotice">Mentions légales</a></li>
+                <li><a href="privacy.html" data-i18n="privacyPolicy">Politique de confidentialité</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,265 @@
+/* Global */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #2f6b4e 0%, #317c68 100%);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    color: #222;
+}
+
+/* Container */
+.container {
+    max-width: 700px;
+    margin: 200px auto;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(14, 165, 164, 0.15);
+    padding: 32px 24px;
+}
+
+/* Headings */
+h1 {
+    text-align: center;
+    color: #2f6b4e;
+    margin-bottom: 24px;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* Form labels and inputs */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+input[type="password"],
+input[type="text"] {
+    display: block;
+    margin: 0 auto 18px auto;
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+    text-align: center;
+}
+
+input[type="password"]:focus,
+input[type="text"]:focus {
+    border-color: #2f6b4e;
+    outline: none;
+}
+
+/* Buttons */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #2f6b4e;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background: #317c68;
+}
+
+/* Result box */
+.result {
+    margin-top: 20px;
+    padding: 12px;
+    background: #f3f4fa;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #333;
+    box-shadow: 0 2px 8px rgba(14, 165, 164, 0.07);
+}
+
+/* Positionne le toggle à l'extrémité droite du conteneur */
+.container {
+    position: relative;
+}
+
+/* Prévoir de l'espace à droite des inputs pour éviter le recouvrement
+   réduit car le bouton sera plus petit */
+input[type="password"],
+input[type="text"] {
+    padding-right: 36px;
+}
+
+/* Toggle password eye icon - juste l'œil, plus petit et tout à droite */
+#togglePassword {
+    position: absolute;
+    right: 24px;              /* aligné avec le bord droit intérieur du conteneur (padding: 24px) */
+    top: 50%;
+    transform: translateY(-50%); /* centre verticalement */
+    background: transparent;
+    border: none;
+    width: 28px;
+    height: 28px;
+    padding: 0;               /* pas d'espace autour de l'icône */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    line-height: 0;
+}
+
+/* L'icône elle-même plus petite */
+#togglePassword svg {
+    width: 18px;
+    height: 18px;
+    display: block;
+}
+
+/* Affichage conditionnel des icônes eye / eye-slash */
+#togglePassword .eye {
+    display: none;
+}
+
+#togglePassword .eye-slash {
+    display: inline;
+}
+
+#togglePassword[aria-pressed="true"] .eye {
+    display: inline;
+}
+
+#togglePassword[aria-pressed="true"] .eye-slash {
+    display: none;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    background-color: #fefefe;
+    border-radius: 0 0 8px 8px;
+}
+
+header .logo {
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin: 0;
+}
+header .logo img {
+  width: 100%;
+  height: 100%;
+  font-family: "object-fit:contain";
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+header .menu ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header .menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    padding: 6px 8px;
+    border-radius: 6px;
+    transition: background-color 0.15s, color 0.15s;
+}
+
+header .menu a:hover {
+    background-color: rgba(14, 165, 164, 0.08);
+    color: #0ea5a4;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #fefefe;
+    border-top: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+footer .logo {
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin: 0;
+}
+footer .logo img {
+  width: 100%;
+  height: 100%;
+  font-family: "object-fit:contain";
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+footer .menu ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer .menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 0.95rem;
+    padding: 4px 6px;
+    border-radius: 6px;
+}
+
+footer .menu a:hover {
+    color: #2f6b4e;
+    background-color: rgba(14, 165, 164, 0.04);
+}
+
+figure {
+    margin: 24px auto;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: transparent;
+}
+
+figcaption {
+    color: #fff; 
+    font-weight: 600;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    padding: 0 76px;
+}
+
+audio {
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+    accent-color: #0ea5a4;
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: transparent;
+    border-radius: 0;
+}
