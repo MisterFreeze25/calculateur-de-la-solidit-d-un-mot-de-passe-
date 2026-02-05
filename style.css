@@ -667,11 +667,28 @@ figcaption {
   font-weight: 600;
   transition: all 0.3s ease;
   margin-top: 8px;
+  position: relative;
+  overflow: hidden;
 }
 
-.security-link:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+.security-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.security-link:hover::before {
+  left: 100%;
 }
 
 .security-link:focus-visible {
