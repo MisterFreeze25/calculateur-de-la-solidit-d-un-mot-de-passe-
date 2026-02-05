@@ -29,24 +29,6 @@ body {
   min-height: 100vh;
   color: #222;
   padding: 20px;
-  animation: gradientShift 45s ease-in-out infinite;
-  background-size: 200% 200%;
-}
-
-/* Transition très douce et discrète du dégradé de fond */
-@keyframes gradientShift {
-  0% {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-    background-position: 0% 50%;
-  }
-  50% {
-    background: linear-gradient(135deg, #764ba2 0%, #667eea 50%, #f093fb 100%);
-    background-position: 50% 50%;
-  }
-  100% {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-    background-position: 100% 50%;
-  }
 }
 
 /* ===== CONTAINER PRINCIPAL ===== */
@@ -354,14 +336,13 @@ input[type="text"] {
 #togglePassword {
   position: absolute;
   right: 8px;
-  top: auto;
-  bottom: calc(100% + 6px);
-  transform: none;
-  background: transparent;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
   border: none;
-  width: 28px;
-  height: 28px;
-  padding: 3px;
+  width: 60px;
+  height: 60px;
+  padding: 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -370,7 +351,12 @@ input[type="text"] {
   line-height: 0;
   color: #667eea;
   transition: all 0.3s ease;
-  border-radius: 8px;
+  border-radius: 4px;
+}
+
+#togglePassword svg {
+  width: 100%;
+  height: 100%;
 }
 
 /* Ensure input doesn't stretch under the absolute icon and keeps space for it */
@@ -378,13 +364,13 @@ input[type="text"] {
 .password-field input[type="text"] {
   flex: 1 1 auto;
   width: auto;
-  padding-right: 48px;
+  padding-right: 70px;
   margin: 0;
 }
 
-/* Give a bit of space so the icon sits visually above the input */
+/* Give a bit of space so the icon sits visually inside the input */
 .password-field {
-  padding-top: 6px;
+  padding-top: 0;
   margin-bottom: 18px;
   animation: fadeInLeft 0.5s ease-out 0.15s both;
 }
@@ -392,7 +378,7 @@ input[type="text"] {
 #togglePassword:hover {
   background: rgba(102, 126, 234, 0.15);
   color: #764ba2;
-  transform: scale(1.1) rotate(5deg);
+  transform: translateY(-50%);
   box-shadow: 0 0 15px rgba(102, 126, 234, 0.2);
 }
 
@@ -400,34 +386,6 @@ input[type="text"] {
   outline: 2px solid #667eea;
   outline-offset: 2px;
   border-radius: 8px;
-}
-
-#togglePassword svg {
-  width: 20px;
-  height: 20px;
-  display: block;
-  transition: transform 0.3s ease;
-}
-
-#togglePassword:hover svg {
-  transform: rotate(-15deg) scale(1.15);
-}
-
-/* Affichage conditionnel des icônes eye / eye-slash */
-#togglePassword .eye {
-  display: none;
-}
-
-#togglePassword .eye-slash {
-  display: inline;
-}
-
-#togglePassword[aria-pressed="true"] .eye {
-  display: inline;
-}
-
-#togglePassword[aria-pressed="true"] .eye-slash {
-  display: none;
 }
 
 /* ===== HEADER ===== */
@@ -655,22 +613,70 @@ figcaption {
   animation: fadeInLeft 0.5s ease-out 0.2s both;
 }
 
-audio {
-  width: 100%;
-  border-radius: 8px;
+/* ===== SECURITY DOCK ===== */
+.security-dock {
+  max-width: 650px;
+  margin: 30px auto;
+  padding: 0;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  animation: slideUp 0.6s ease-out 0.2s both;
   transition: all 0.3s ease;
 }
 
-audio:hover {
-  filter: drop-shadow(0 0 10px rgba(102, 126, 234, 0.4));
+.security-dock:hover {
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.15),
+    0 0 30px rgba(102, 126, 234, 0.2);
+  transform: translateY(-3px);
 }
 
-audio::-webkit-media-controls-panel {
-  background: linear-gradient(
-    135deg,
-    rgba(102, 126, 234, 0.1),
-    rgba(118, 75, 162, 0.1)
-  );
+.dock-container {
+  padding: 28px 32px;
+}
+
+.dock-container h2 {
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 16px;
+  font-size: 1.05rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: fadeInLeft 0.5s ease-out 0.2s both;
+}
+
+.dock-container p {
+  color: #555;
+  line-height: 1.6;
+  margin: 16px 0;
+  font-size: 0.95rem;
+}
+
+.security-link {
+  display: inline-block;
+  padding: 10px 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-top: 8px;
+}
+
+.security-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.security-link:focus-visible {
+  outline: 3px solid #667eea;
+  outline-offset: 2px;
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
@@ -725,6 +731,17 @@ audio::-webkit-media-controls-panel {
   figure {
     max-width: 100%;
     margin: 20px auto;
+    padding: 20px 24px;
+  }
+
+  .security-dock {
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 0;
+    border-radius: 16px;
+  }
+
+  .dock-container {
     padding: 20px 24px;
   }
 

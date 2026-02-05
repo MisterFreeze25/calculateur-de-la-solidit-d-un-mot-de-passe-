@@ -6,23 +6,43 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function checkStrength(password) {
     let score = 0;
-    if (password.length >= 8) score++;
-    if (/[A-Z]/.test(password)) score++;
-    if (/[a-z]/.test(password)) score++;
-    if (/[0-9]/.test(password)) score++;
-    if (/[^A-Za-z0-9]/.test(password)) score++;
 
-    switch (score) {
-      case 5:
-        return "veryStrong";
-      case 4:
-        return "strong";
-      case 3:
-        return "medium";
-      case 2:
-        return "weak";
-      default:
-        return "veryWeak";
+    // Longueur - critère principal
+    if (password.length >= 8) score += 1;
+    if (password.length >= 12) score += 1;
+    if (password.length >= 16) score += 1;
+    if (password.length >= 20) score += 1;
+
+    // Diversité des caractères
+    if (/[A-Z]/.test(password)) score += 1;
+    if (/[a-z]/.test(password)) score += 1;
+    if (/[0-9]/.test(password)) score += 1;
+    if (/[^A-Za-z0-9]/.test(password)) score += 1;
+
+    // Points supplémentaires pour caractères spéciaux multiples
+    if (/[^A-Za-z0-9]/.test(password) && password.length >= 12) {
+      score += 1;
+    }
+
+    // Pénalité pour patterns faibles
+    if (/^[0-9]{4,}$/.test(password)) score -= 2;
+    if (/(.)\\1{2,}/.test(password)) score -= 1;
+    if (/password|123|abc|admin|qwerty/i.test(password)) score -= 2;
+
+    // S'assurer que le score est entre 0 et 10
+    score = Math.max(0, Math.min(10, score));
+
+    // Convertir le score numérique en force
+    if (score <= 2) {
+      return "veryWeak";
+    } else if (score <= 4) {
+      return "weak";
+    } else if (score <= 6) {
+      return "medium";
+    } else if (score <= 8) {
+      return "strong";
+    } else {
+      return "veryStrong";
     }
   }
 
@@ -32,6 +52,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const issues = [];
     if (password.length < 8) {
       issues.push(feedback.minLength);
+    } else if (password.length < 12) {
+      issues.push(feedback.preferLonger);
     }
     if (!/[A-Z]/.test(password)) {
       issues.push(feedback.uppercase);
@@ -44,6 +66,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     if (!/[^A-Za-z0-9]/.test(password)) {
       issues.push(feedback.special);
+    }
+    if (/^[0-9]{4,}$/.test(password)) {
+      issues.push(feedback.noSequential);
+    }
+    if (/(.)\1{2,}/.test(password)) {
+      issues.push(feedback.noRepeat);
+    }
+    if (/password|123|abc|admin/i.test(password)) {
+      issues.push(feedback.noCommon);
     }
     return issues;
   }
@@ -383,12 +414,20 @@ const translations = {
     hidePassword: "Cacher le mot de passe",
     feedback: {
       minLength: "Le mot de passe doit contenir au moins 8 caractères",
+      preferLonger: "Préférez au moins 12 caractères pour plus de sécurité",
       uppercase: "Manque : Majuscules",
       lowercase: "Manque : Minuscules",
       numbers: "Manque : Chiffres",
       special: "Manque : Caractères spéciaux",
+      noSequential: "Évitez les chiffres séquentiels",
+      noRepeat: "Évitez les caractères répétés",
+      noCommon: "Évitez les mots courants (password, admin, etc.)",
       improvementsNeeded: "À améliorer :",
     },
+    securityTitle: "Conseils de sécurité",
+    securityDescription:
+      "Un bon mot de passe doit contenir : des majuscules, des minuscules, des chiffres et des caractères spéciaux.",
+    learnMore: "En savoir plus",
   },
   en: {
     title: "Password Strength Calculator",
@@ -416,12 +455,20 @@ const translations = {
     hidePassword: "Hide password",
     feedback: {
       minLength: "Password must contain at least 8 characters",
+      preferLonger: "Prefer at least 12 characters for better security",
       uppercase: "Missing: Uppercase letters",
       lowercase: "Missing: Lowercase letters",
       numbers: "Missing: Numbers",
       special: "Missing: Special characters",
+      noSequential: "Avoid sequential numbers",
+      noRepeat: "Avoid repeated characters",
+      noCommon: "Avoid common words (password, admin, etc.)",
       improvementsNeeded: "Improvements needed:",
     },
+    securityTitle: "Security Tips",
+    securityDescription:
+      "A good password should contain: uppercase letters, lowercase letters, numbers and special characters.",
+    learnMore: "Learn more",
   },
   de: {
     title: "Passwortstärke-Rechner",
@@ -449,12 +496,21 @@ const translations = {
     hidePassword: "Passwort verbergen",
     feedback: {
       minLength: "Das Passwort muss mindestens 8 Zeichen enthalten",
+      preferLonger:
+        "Bevorzugen Sie mindestens 12 Zeichen für bessere Sicherheit",
       uppercase: "Fehlend: Großbuchstaben",
       lowercase: "Fehlend: Kleinbuchstaben",
       numbers: "Fehlend: Zahlen",
       special: "Fehlend: Sonderzeichen",
+      noSequential: "Vermeiden Sie fortlaufende Zahlen",
+      noRepeat: "Vermeiden Sie wiederholte Zeichen",
+      noCommon: "Vermeiden Sie häufige Wörter (password, admin, usw.)",
       improvementsNeeded: "Verbesserungen erforderlich:",
     },
+    securityTitle: "Sicherheitstipps",
+    securityDescription:
+      "Ein gutes Passwort sollte enthalten: Großbuchstaben, Kleinbuchstaben, Zahlen und Sonderzeichen.",
+    learnMore: "Mehr erfahren",
   },
   sp: {
     title: "Calculador de fuerza de contraseña",
@@ -482,12 +538,20 @@ const translations = {
     hidePassword: "Ocultar contraseña",
     feedback: {
       minLength: "La contraseña debe contener al menos 8 caracteres",
+      preferLonger: "Prefiera al menos 12 caracteres para mayor seguridad",
       uppercase: "Falta: Letías mayúsculas",
       lowercase: "Falta: Letías minúsculas",
       numbers: "Falta: Números",
       special: "Falta: Caracteres especiales",
+      noSequential: "Evite números secuenciales",
+      noRepeat: "Evite caracteres repetidos",
+      noCommon: "Evite palabras comunes (password, admin, etc.)",
       improvementsNeeded: "Mejoras necesarias:",
     },
+    securityTitle: "Consejos de seguridad",
+    securityDescription:
+      "Una buena contraseña debe contener: letras mayúsculas, letras minúsculas, números y caracteres especiales.",
+    learnMore: "Más información",
   },
   it: {
     title: "Calcolatore della forza della password",
@@ -515,12 +579,20 @@ const translations = {
     hidePassword: "Nascondi password",
     feedback: {
       minLength: "La password deve contenere almeno 8 caratteri",
+      preferLonger: "Preferisci almeno 12 caratteri per maggiore sicurezza",
       uppercase: "Mancano: Lettere maiuscole",
       lowercase: "Mancano: Lettere minuscole",
       numbers: "Mancano: Numeri",
       special: "Mancano: Caratteri speciali",
+      noSequential: "Evita numeri sequenziali",
+      noRepeat: "Evita caratteri ripetuti",
+      noCommon: "Evita parole comuni (password, admin, ecc.)",
       improvementsNeeded: "Miglioramenti necessari:",
     },
+    securityTitle: "Consigli di sicurezza",
+    securityDescription:
+      "Una buona password deve contenere: lettere maiuscole, lettere minuscole, numeri e caratteri speciali.",
+    learnMore: "Ulteriori informazioni",
   },
   pt: {
     title: "Calculadora de força de senha",
@@ -548,12 +620,20 @@ const translations = {
     hidePassword: "Ocultar senha",
     feedback: {
       minLength: "A senha deve conter pelo menos 8 caracteres",
+      preferLonger: "Prefira pelo menos 12 caracteres para maior segurança",
       uppercase: "Faltando: Letras maiúsculas",
       lowercase: "Faltando: Letras minúsculas",
       numbers: "Faltando: Números",
       special: "Faltando: Caracteres especiais",
+      noSequential: "Evite números sequenciais",
+      noRepeat: "Evite caracteres repetidos",
+      noCommon: "Evite palavras comuns (password, admin, etc.)",
       improvementsNeeded: "Melhorias necessárias:",
     },
+    securityTitle: "Dicas de segurança",
+    securityDescription:
+      "Uma boa senha deve conter: letras maiúsculas, letras minúsculas, números e caracteres especiais.",
+    learnMore: "Saiba mais",
   },
   nl: {
     title: "Wachtwoordsterkte Calculator",
@@ -581,12 +661,20 @@ const translations = {
     hidePassword: "Wachtwoord verbergen",
     feedback: {
       minLength: "Wachtwoord moet minimaal 8 tekens bevatten",
+      preferLonger: "Verkies minstens 12 tekens voor betere veiligheid",
       uppercase: "Ontbrekend: Hoofdletters",
       lowercase: "Ontbrekend: Kleine letters",
       numbers: "Ontbrekend: Nummers",
       special: "Ontbrekend: Speciale tekens",
+      noSequential: "Vermijd opeenvolgende nummers",
+      noRepeat: "Vermijd herhaalde tekens",
+      noCommon: "Vermijd veelgebruikte woorden (password, admin, enz.)",
       improvementsNeeded: "Verbeteringen nodig:",
     },
+    securityTitle: "Veiligheidstips",
+    securityDescription:
+      "Een goed wachtwoord moet bevatten: hoofdletters, kleine letters, nummers en speciale tekens.",
+    learnMore: "Meer informatie",
   },
   br: {
     title: "Kalkulator krederion ar geriadur",
@@ -614,12 +702,20 @@ const translations = {
     hidePassword: "Kuzh ar geriadur",
     feedback: {
       minLength: "Ar geriadur a rank kaout a-berzh 8 arouezennoù",
+      preferLonger: "Penndibabit a-berzh 12 a-seurt evit gwell-ruzh",
       uppercase: "Diankatiet : Lizherennoù bras",
       lowercase: "Diankatiet : Lizherennoù bihan",
       numbers: "Diankatiet : Niverou",
       special: "Diankatiet : Arzoù special",
+      noSequential: "Strivout lizherennoù a-reiñv",
+      noRepeat: "Strivout arouezennù gwallakaoued",
+      noCommon: "Strivout gerzoù a veheñg (password, admin, arl.)",
       improvementsNeeded: "Gwellañ a zo ezhomm:",
     },
+    securityTitle: "Alvelennoù ruzh",
+    securityDescription:
+      "Ur geriadur mat a rankfe kaout : lizherennoù bras, lizherennoù bihan, niverou ha arzoù special.",
+    learnMore: "Gouzout an nemet",
   },
 };
 

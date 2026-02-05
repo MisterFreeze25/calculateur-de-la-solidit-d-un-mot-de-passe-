@@ -38,7 +38,7 @@
       </p>
       <div
         class="password-field"
-        style="display: flex; gap: 8px; align-items: center"
+        style="display: flex; gap: 0; align-items: stretch; position: relative"
         role="group"
         aria-labelledby="passwordLabel"
       >
@@ -49,6 +49,7 @@
           data-i18n-placeholder="passwordPlaceholder"
           autocomplete="off"
           aria-describedby="passwordHelp"
+          style="flex: 1; padding-right: 40px"
         />
         <button
           type="button"
@@ -56,13 +57,20 @@
           aria-pressed="false"
           aria-label="Afficher le mot de passe"
           style="
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
             background: none;
             border: 0;
-            padding: 4px;
+            padding: 8px;
             cursor: pointer;
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             color: #222;
+            height: 24px;
+            width: 24px;
           "
         ></button>
       </div>
@@ -81,14 +89,29 @@
         aria-atomic="true"
       ></div>
     </div>
-    <figure>
-      <figcaption data-i18n="listenMusic">Écoutez la musique :</figcaption>
-      <audio
-        controls
-        src="./assets/Socal.mp3"
-        aria-label="Musique d'ambiance - Socal.mp3"
-      ></audio>
-    </figure>
+    <section
+      class="security-dock"
+      role="region"
+      aria-label="Information de sécurité"
+    >
+      <div class="dock-container">
+        <h2 data-i18n="securityTitle" style="margin-top: 0">
+          Conseils de sécurité
+        </h2>
+        <p data-i18n="securityDescription">
+          Un bon mot de passe doit contenir : des majuscules, des minuscules,
+          des chiffres et des caractères spéciaux.
+        </p>
+        <a
+          href="https://www.cybermalveillance.gouv.fr/tous-nos-contenus/actualites/comment-choisir-un-bon-mot-de-passe#:~:text=Votre%20mot%20de%20passe%20doit,chiffres%20et%20des%20caract%C3%A8res%20sp%C3%A9ciaux."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="security-link"
+          data-i18n="learnMore"
+          >En savoir plus</a
+        >
+      </div>
+    </section>
     <footer role="contentinfo">
       <img
         class="logo"
