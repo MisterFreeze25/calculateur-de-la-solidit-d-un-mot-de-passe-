@@ -127,24 +127,31 @@ button:active {
   position: relative;
 }
 
+/* Ancre l'icône œil au champ password pour éviter qu'elle ne bouge */
+.password-field {
+  position: relative;
+  width: 100%;
+}
+
 /* Prévoir de l'espace à droite des inputs pour éviter le recouvrement
    réduit car le bouton sera plus petit */
 input[type="password"],
 input[type="text"] {
-  padding-right: 36px;
+  padding-right: 48px;
 }
 
 /* Toggle password eye icon */
 #togglePassword {
   position: absolute;
-  right: 28px;
-  top: 50%;
-  transform: translateY(-50%);
+  right: 8px;
+  top: auto;
+  bottom: calc(100% + 6px);
+  transform: none;
   background: transparent;
   border: none;
-  width: 40px;
-  height: 40px;
-  padding: 8px;
+  width: 28px;
+  height: 28px;
+  padding: 3px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -154,6 +161,21 @@ input[type="text"] {
   color: #667eea;
   transition: all 0.3s ease;
   border-radius: 8px;
+}
+
+/* Ensure input doesn't stretch under the absolute icon and keeps space for it */
+.password-field input[type="password"],
+.password-field input[type="text"] {
+  flex: 1 1 auto;
+  width: auto;
+  padding-right: 48px;
+  margin: 0;
+}
+
+/* Give a bit of space so the icon sits visually above the input */
+.password-field {
+  padding-top: 6px;
+  margin-bottom: 18px;
 }
 
 #togglePassword:hover {
