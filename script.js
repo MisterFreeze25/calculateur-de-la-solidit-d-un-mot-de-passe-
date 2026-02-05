@@ -26,6 +26,51 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  function getPasswordFeedback(password) {
+    const feedback =
+      translations[currentLanguage]?.feedback || translations.fr.feedback;
+    const issues = [];
+    if (password.length < 8) {
+      issues.push(feedback.minLength);
+    }
+    if (!/[A-Z]/.test(password)) {
+      issues.push(feedback.uppercase);
+    }
+    if (!/[a-z]/.test(password)) {
+      issues.push(feedback.lowercase);
+    }
+    if (!/[0-9]/.test(password)) {
+      issues.push(feedback.numbers);
+    }
+    if (!/[^A-Za-z0-9]/.test(password)) {
+      issues.push(feedback.special);
+    }
+    return issues;
+  }
+
+  function generatePassword() {
+    const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const lowercase = "abcdefghijklmnopqrstuvwxyz";
+    const numbers = "0123456789";
+    const special = "!@#$%^&*()_+-=[]{}|;:,.<>?";
+
+    let password = "";
+    password += uppercase[Math.floor(Math.random() * uppercase.length)];
+    password += lowercase[Math.floor(Math.random() * lowercase.length)];
+    password += numbers[Math.floor(Math.random() * numbers.length)];
+    password += special[Math.floor(Math.random() * special.length)];
+
+    const allChars = uppercase + lowercase + numbers + special;
+    for (let i = 4; i < 12; i++) {
+      password += allChars[Math.floor(Math.random() * allChars.length)];
+    }
+
+    return password
+      .split("")
+      .sort(() => Math.random() - 0.5)
+      .join("");
+  }
+
   let currentLanguage = localStorage.getItem("language") || "fr";
 
   // Fonction pour créer des particules au clic
@@ -73,17 +118,34 @@ document.addEventListener("DOMContentLoaded", () => {
     const strengthKey = checkStrength(password);
     const strengthText =
       translations[currentLanguage]?.strengths?.[strengthKey] || "Unknown";
-    const emptyText =
-      translations[currentLanguage]?.emptyPassword ||
-      "Veuillez entrer un mot de passe.";
-    results.textContent = `Solidité : ${strengthText}`;
+    const feedback = getPasswordFeedback(password);
+    const strengthLabel =
+      currentLanguage === "fr"
+        ? "Solidité"
+        : translations[currentLanguage]?.strengthLabel || "Strength";
+    const improvementsLabel =
+      translations[currentLanguage]?.feedback?.improvementsNeeded ||
+      "Improvements needed:";
+
+    let resultHTML = `<div style="font-weight: 600; margin-bottom: 12px; color: ${strengthColors[strengthKey]};">${strengthLabel} : ${strengthText}</div>`;
+
+    if (feedback.length > 0) {
+      resultHTML += `<div style="font-size: 0.9rem; margin-top: 8px; padding: 12px; background: rgba(0,0,0,0.05); border-radius: 8px;">`;
+      resultHTML += `<strong style="display: block; margin-bottom: 8px; color: #333;">${improvementsLabel}</strong>`;
+      feedback.forEach((issue) => {
+        resultHTML += `<div style="margin: 4px 0; color: #555;">• ${issue}</div>`;
+      });
+      resultHTML += `</div>`;
+    }
+
+    results.innerHTML = resultHTML;
     results.style.color = strengthColors[strengthKey] || "black";
     results.setAttribute("role", "status");
     results.setAttribute("aria-live", "polite");
     results.setAttribute("aria-atomic", "true");
     results.setAttribute(
       "aria-label",
-      `Solidité du mot de passe: ${strengthText}`,
+      `Solidité du mot de passe: ${strengthText}. ${feedback.length > 0 ? feedback.join(". ") : ""}`,
     );
   }
 
@@ -162,6 +224,13 @@ document.addEventListener("DOMContentLoaded", () => {
     adjustSVGSize(small ? 20 : medium ? 18 : 16);
   }
 
+  // Empêcher les espaces dans le champ mot de passe
+  if (passwordInput) {
+    passwordInput.addEventListener("input", (e) => {
+      e.target.value = e.target.value.replace(/\s/g, "");
+    });
+  }
+
   if (passwordInput && checkButton && results) {
     // sauvegarder le texte d'origine du bouton
     const originalCheckText = checkButton.textContent || "Vérifier";
@@ -232,6 +301,33 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Gestion du bouton Générer un mot de passe
+  const generateButton = document.getElementById("generateButton");
+  if (generateButton && passwordInput) {
+    generateButton.addEventListener("click", () => {
+      const newPassword = generatePassword();
+      passwordInput.value = newPassword;
+      passwordInput.type = "text";
+      updateToggle();
+      if (toggle) {
+        toggle.style.pointerEvents = "";
+        toggle.removeAttribute("aria-disabled");
+      }
+      passwordInput.disabled = false;
+      checkButton.dataset.mode = "check";
+      const originalCheckText = checkButton.textContent || "Vérifier";
+      checkButton.textContent = originalCheckText;
+      if (results) {
+        results.textContent = "";
+        results.style.color = "";
+        results.removeAttribute("aria-label");
+        results.removeAttribute("role");
+      }
+      passwordInput.focus();
+      createClickParticles(event);
+    });
+  }
+
   if (passwordInput && toggle) {
     // initialiser l'icône au chargement
     updateToggle();
@@ -268,10 +364,12 @@ const translations = {
     passwordHelp:
       "Entrez un mot de passe pour vérifier sa solidité. Un bon mot de passe contient des majuscules, des minuscules, des chiffres et des caractères spéciaux.",
     checkButton: "Vérifier la solidité",
+    generateButton: "Générer un mot de passe",
     listenMusic: "Écoutez la musique :",
     github: "Mon GitHub",
     legalNotice: "Mentions légales",
     privacyPolicy: "Politique de confidentialité",
+    strengthLabel: "Solidité",
     strengths: {
       veryStrong: "Très fort",
       strong: "Fort",
@@ -283,6 +381,14 @@ const translations = {
     emptyPassword: "Veuillez entrer un mot de passe.",
     showPassword: "Afficher le mot de passe",
     hidePassword: "Cacher le mot de passe",
+    feedback: {
+      minLength: "Le mot de passe doit contenir au moins 8 caractères",
+      uppercase: "Manque : Majuscules",
+      lowercase: "Manque : Minuscules",
+      numbers: "Manque : Chiffres",
+      special: "Manque : Caractères spéciaux",
+      improvementsNeeded: "À améliorer :",
+    },
   },
   en: {
     title: "Password Strength Calculator",
@@ -291,10 +397,12 @@ const translations = {
     passwordHelp:
       "Enter a password to check its strength. A good password contains uppercase letters, lowercase letters, numbers and special characters.",
     checkButton: "Check strength",
+    generateButton: "Generate password",
     listenMusic: "Listen to the music:",
     github: "My GitHub",
     legalNotice: "Legal Notice",
     privacyPolicy: "Privacy Policy",
+    strengthLabel: "Strength",
     strengths: {
       veryStrong: "Very Strong",
       strong: "Strong",
@@ -306,6 +414,14 @@ const translations = {
     emptyPassword: "Please enter a password.",
     showPassword: "Show password",
     hidePassword: "Hide password",
+    feedback: {
+      minLength: "Password must contain at least 8 characters",
+      uppercase: "Missing: Uppercase letters",
+      lowercase: "Missing: Lowercase letters",
+      numbers: "Missing: Numbers",
+      special: "Missing: Special characters",
+      improvementsNeeded: "Improvements needed:",
+    },
   },
   de: {
     title: "Passwortstärke-Rechner",
@@ -314,10 +430,12 @@ const translations = {
     passwordHelp:
       "Geben Sie ein Passwort ein, um dessen Stärke zu überprüfen. Ein gutes Passwort enthält Großbuchstaben, Kleinbuchstaben, Zahlen und Sonderzeichen.",
     checkButton: "Stärke prüfen",
+    generateButton: "Passwort generieren",
     listenMusic: "Musik anhören:",
     github: "Mein GitHub",
     legalNotice: "Rechtlicher Hinweis",
     privacyPolicy: "Datenschutz-Bestimmungen",
+    strengthLabel: "Stärke",
     strengths: {
       veryStrong: "Sehr stark",
       strong: "Stark",
@@ -329,6 +447,14 @@ const translations = {
     emptyPassword: "Bitte geben Sie ein Passwort ein.",
     showPassword: "Passwort anzeigen",
     hidePassword: "Passwort verbergen",
+    feedback: {
+      minLength: "Das Passwort muss mindestens 8 Zeichen enthalten",
+      uppercase: "Fehlend: Großbuchstaben",
+      lowercase: "Fehlend: Kleinbuchstaben",
+      numbers: "Fehlend: Zahlen",
+      special: "Fehlend: Sonderzeichen",
+      improvementsNeeded: "Verbesserungen erforderlich:",
+    },
   },
   sp: {
     title: "Calculador de fuerza de contraseña",
@@ -337,10 +463,12 @@ const translations = {
     passwordHelp:
       "Ingrese una contraseña para verificar su fuerza. Una buena contraseña contiene letras mayúsculas, minúsculas, números y caracteres especiales.",
     checkButton: "Verificar fuerza",
+    generateButton: "Generar contraseña",
     listenMusic: "Escuchar música:",
     github: "Mi GitHub",
     legalNotice: "Aviso legal",
     privacyPolicy: "Política de privacidad",
+    strengthLabel: "Fuerza",
     strengths: {
       veryStrong: "Muy fuerte",
       strong: "Fuerte",
@@ -352,6 +480,14 @@ const translations = {
     emptyPassword: "Por favor, ingrese una contraseña.",
     showPassword: "Mostrar contraseña",
     hidePassword: "Ocultar contraseña",
+    feedback: {
+      minLength: "La contraseña debe contener al menos 8 caracteres",
+      uppercase: "Falta: Letías mayúsculas",
+      lowercase: "Falta: Letías minúsculas",
+      numbers: "Falta: Números",
+      special: "Falta: Caracteres especiales",
+      improvementsNeeded: "Mejoras necesarias:",
+    },
   },
   it: {
     title: "Calcolatore della forza della password",
@@ -360,10 +496,12 @@ const translations = {
     passwordHelp:
       "Inserisci una password per verificarne la forza. Una buona password contiene lettere maiuscole, minuscole, numeri e caratteri speciali.",
     checkButton: "Verifica forza",
+    generateButton: "Genera password",
     listenMusic: "Ascolta la musica:",
     github: "Il mio GitHub",
     legalNotice: "Avviso legale",
     privacyPolicy: "Politica sulla privacy",
+    strengthLabel: "Forza",
     strengths: {
       veryStrong: "Molto forte",
       strong: "Forte",
@@ -375,6 +513,14 @@ const translations = {
     emptyPassword: "Per favore, inserisci una password.",
     showPassword: "Mostra password",
     hidePassword: "Nascondi password",
+    feedback: {
+      minLength: "La password deve contenere almeno 8 caratteri",
+      uppercase: "Mancano: Lettere maiuscole",
+      lowercase: "Mancano: Lettere minuscole",
+      numbers: "Mancano: Numeri",
+      special: "Mancano: Caratteri speciali",
+      improvementsNeeded: "Miglioramenti necessari:",
+    },
   },
   pt: {
     title: "Calculadora de força de senha",
@@ -383,10 +529,12 @@ const translations = {
     passwordHelp:
       "Digite uma senha para verificar sua força. Uma boa senha contém letras maiúsculas, minúsculas, números e caracteres especiais.",
     checkButton: "Verificar força",
+    generateButton: "Gerar senha",
     listenMusic: "Ouça a música:",
     github: "Meu GitHub",
     legalNotice: "Aviso legal",
     privacyPolicy: "Política de privacidade",
+    strengthLabel: "Força",
     strengths: {
       veryStrong: "Muito forte",
       strong: "Forte",
@@ -398,6 +546,14 @@ const translations = {
     emptyPassword: "Por favor, digite uma senha.",
     showPassword: "Mostrar senha",
     hidePassword: "Ocultar senha",
+    feedback: {
+      minLength: "A senha deve conter pelo menos 8 caracteres",
+      uppercase: "Faltando: Letras maiúsculas",
+      lowercase: "Faltando: Letras minúsculas",
+      numbers: "Faltando: Números",
+      special: "Faltando: Caracteres especiais",
+      improvementsNeeded: "Melhorias necessárias:",
+    },
   },
   nl: {
     title: "Wachtwoordsterkte Calculator",
@@ -406,10 +562,12 @@ const translations = {
     passwordHelp:
       "Voer een wachtwoord in om de sterkte te controleren. Een goed wachtwoord bevat hoofdletters, kleine letters, getallen en speciale tekens.",
     checkButton: "Controleer sterkte",
+    generateButton: "Genereer wachtwoord",
     listenMusic: "Luister naar de muziek:",
     github: "Mijn GitHub",
     legalNotice: "Juridische kennisgeving",
     privacyPolicy: "Privacybeleid",
+    strengthLabel: "Sterkte",
     strengths: {
       veryStrong: "Zeer sterk",
       strong: "Sterk",
@@ -421,6 +579,14 @@ const translations = {
     emptyPassword: "Voer alstublieft een wachtwoord in.",
     showPassword: "Wachtwoord weergeven",
     hidePassword: "Wachtwoord verbergen",
+    feedback: {
+      minLength: "Wachtwoord moet minimaal 8 tekens bevatten",
+      uppercase: "Ontbrekend: Hoofdletters",
+      lowercase: "Ontbrekend: Kleine letters",
+      numbers: "Ontbrekend: Nummers",
+      special: "Ontbrekend: Speciale tekens",
+      improvementsNeeded: "Verbeteringen nodig:",
+    },
   },
   br: {
     title: "Kalkulator krederion ar geriadur",
@@ -429,10 +595,12 @@ const translations = {
     passwordHelp:
       "Entrer ho geriadur evit gwiriat e grederion. Ur geriadur mat a gouzout a vez brini-gaoz, brini-izel, toudoù hag arzoù izili.",
     checkButton: "Gwiriat krederion",
+    generateButton: "Gañell ur geriadur",
     listenMusic: "Klevet al leizh :",
     github: "Ma GitHub",
     legalNotice: "Notenn reizh",
     privacyPolicy: "Politik prevezded",
+    strengthLabel: "Krederion",
     strengths: {
       veryStrong: "Krederion mat-tre",
       strong: "Krederion mat",
@@ -444,6 +612,14 @@ const translations = {
     emptyPassword: "Entrer ho geriadur, mar plij.",
     showPassword: "Diskouez ar geriadur",
     hidePassword: "Kuzh ar geriadur",
+    feedback: {
+      minLength: "Ar geriadur a rank kaout a-berzh 8 arouezennoù",
+      uppercase: "Diankatiet : Lizherennoù bras",
+      lowercase: "Diankatiet : Lizherennoù bihan",
+      numbers: "Diankatiet : Niverou",
+      special: "Diankatiet : Arzoù special",
+      improvementsNeeded: "Gwellañ a zo ezhomm:",
+    },
   },
 };
 
