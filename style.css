@@ -18,8 +18,10 @@
   border-width: 0;
 }
 
+/* ===== BODY & BACKGROUND ===== */
 body {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  background-attachment: fixed;
   font-family:
     -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
     "Cantarell", sans-serif;
@@ -27,8 +29,27 @@ body {
   min-height: 100vh;
   color: #222;
   padding: 20px;
+  animation: gradientShift 45s ease-in-out infinite;
+  background-size: 200% 200%;
 }
 
+/* Transition très douce et discrète du dégradé de fond */
+@keyframes gradientShift {
+  0% {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    background-position: 0% 50%;
+  }
+  50% {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 50%, #f093fb 100%);
+    background-position: 50% 50%;
+  }
+  100% {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    background-position: 100% 50%;
+  }
+}
+
+/* ===== CONTAINER PRINCIPAL ===== */
 /* Container */
 .container {
   max-width: 650px;
@@ -41,8 +62,47 @@ body {
   padding: 48px 32px;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.3);
+  animation: fadeInScale 0.6s ease-out;
+  position: relative;
 }
 
+/* Gradient subtil en arrière-plan du container */
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+  background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.05) 0%,
+    rgba(118, 75, 162, 0.05) 100%
+  );
+  pointer-events: none;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Effet de lueur au survol du conteneur */
+.container:hover {
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.25),
+    0 0 1px rgba(0, 0, 0, 0.1),
+    0 0 40px rgba(102, 126, 234, 0.2);
+}
+
+/* ===== TYPOGRAPHIE ===== */
 /* Headings */
 h1 {
   text-align: center;
@@ -54,8 +114,22 @@ h1 {
   font-size: 2.2rem;
   font-weight: 800;
   letter-spacing: -0.5px;
+  animation: titlePulse 0.8s ease-out;
+  text-shadow: 0 0 20px rgba(102, 126, 234, 0.2);
 }
 
+@keyframes titlePulse {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== FORMULAIRE ===== */
 /* Form labels and inputs */
 label {
   display: block;
@@ -63,8 +137,21 @@ label {
   font-weight: 600;
   color: #333;
   font-size: 0.95rem;
+  animation: fadeInLeft 0.5s ease-out 0.1s both;
 }
 
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Champs texte et mot de passe */
 input[type="password"],
 input[type="text"] {
   display: block;
@@ -77,6 +164,25 @@ input[type="text"] {
   transition: all 0.3s ease;
   text-align: left;
   background: #f9fafb;
+  animation: slideUp 0.5s ease-out 0.15s both;
+  position: relative;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+input[type="password"]::placeholder,
+input[type="text"]::placeholder {
+  color: #aaa;
+  transition: color 0.3s ease;
 }
 
 input[type="password"]:focus,
@@ -84,7 +190,16 @@ input[type="text"]:focus {
   border-color: #667eea;
   outline: none;
   background: #fff;
-  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  box-shadow:
+    0 0 0 3px rgba(102, 126, 234, 0.1),
+    0 0 20px rgba(102, 126, 234, 0.3),
+    inset 0 0 0 1px rgba(102, 126, 234, 0.2);
+  transform: translateY(-2px);
+}
+
+input[type="password"]:focus::placeholder,
+input[type="text"]:focus::placeholder {
+  color: #ccc;
 }
 
 /* Améliore la visibilité du focus au clavier */
@@ -94,7 +209,8 @@ input[type="text"]:focus-visible {
   outline-offset: 2px;
 }
 
-/* Buttons */
+/* ===== BOUTONS ===== */
+/* Bouton principal avec shine effect */
 button {
   width: 100%;
   padding: 14px 16px;
@@ -109,15 +225,41 @@ button {
   box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  animation: slideUp 0.5s ease-out 0.2s both;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Effet de lumière qui traverse le bouton */
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+button:hover::before {
+  left: 100%;
 }
 
 button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+  transform: translateY(-3px);
+  box-shadow:
+    0 8px 25px rgba(102, 126, 234, 0.4),
+    0 0 30px rgba(102, 126, 234, 0.3);
 }
 
 button:active {
-  transform: translateY(0);
+  transform: translateY(-1px);
 }
 
 /* Améliore la visibilité du focus au clavier pour les boutons */
@@ -126,7 +268,8 @@ button:focus-visible {
   outline-offset: 2px;
 }
 
-/* Result box */
+/* ===== RÉSULTATS ===== */
+/* Boîte de résultats avec shimmer effect */
 .result {
   margin-top: 28px;
   padding: 20px 24px;
@@ -141,8 +284,39 @@ button:focus-visible {
   font-size: 1.15rem;
   color: #333;
   font-weight: 600;
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.1);
-  animation: slideIn 0.3s ease;
+  box-shadow:
+    0 4px 15px rgba(102, 126, 234, 0.1),
+    inset 0 0 20px rgba(102, 126, 234, 0.05);
+  animation: slideIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.result::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(102, 126, 234, 0.1) 0%,
+    transparent 70%
+  );
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(50px, 50px) rotate(180deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg);
+  }
 }
 
 @keyframes slideIn {
@@ -167,14 +341,14 @@ button:focus-visible {
   width: 100%;
 }
 
-/* Prévoir de l'espace à droite des inputs pour éviter le recouvrement
-   réduit car le bouton sera plus petit */
+/* Prévoir de l'espace à droite des inputs pour éviter le recouvrement */
 input[type="password"],
 input[type="text"] {
   padding-right: 48px;
 }
 
-/* Toggle password eye icon */
+/* ===== CHAMP MOT DE PASSE & ICÔNE ===== */
+/* Icône de basculement mot de passe/texte */
 #togglePassword {
   position: absolute;
   right: 8px;
@@ -210,11 +384,14 @@ input[type="text"] {
 .password-field {
   padding-top: 6px;
   margin-bottom: 18px;
+  animation: fadeInLeft 0.5s ease-out 0.15s both;
 }
 
 #togglePassword:hover {
-  background: rgba(102, 126, 234, 0.1);
+  background: rgba(102, 126, 234, 0.15);
   color: #764ba2;
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 0 15px rgba(102, 126, 234, 0.2);
 }
 
 #togglePassword:focus-visible {
@@ -227,6 +404,11 @@ input[type="text"] {
   width: 20px;
   height: 20px;
   display: block;
+  transition: transform 0.3s ease;
+}
+
+#togglePassword:hover svg {
+  transform: rotate(-15deg) scale(1.15);
 }
 
 /* Affichage conditionnel des icônes eye / eye-slash */
@@ -246,6 +428,8 @@ input[type="text"] {
   display: none;
 }
 
+/* ===== HEADER ===== */
+/* Barre d'en-tête avec logo et sélecteur de langue */
 header {
   display: flex;
   align-items: center;
@@ -258,14 +442,28 @@ header {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.3);
+  animation: slideDown 0.6s ease-out;
 }
 
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Logo du header avec animation flottante */
 header .logo {
   display: block;
   width: 60px;
   height: 60px;
   margin: 0;
   flex-shrink: 0;
+  animation: float 3s ease-in-out infinite;
 }
 
 header .logo img {
@@ -274,6 +472,7 @@ header .logo img {
   object-fit: contain;
 }
 
+/* Sélecteur de langue */
 #languageSelect {
   padding: 10px 14px;
   border: 2px solid #e5e7eb;
@@ -284,11 +483,26 @@ header .logo img {
   color: #333;
   cursor: pointer;
   transition: all 0.3s ease;
+  animation: fadeInRight 0.6s ease-out 0.1s both;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 #languageSelect:hover {
   border-color: #667eea;
-  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  box-shadow:
+    0 0 0 3px rgba(102, 126, 234, 0.1),
+    0 0 20px rgba(102, 126, 234, 0.2);
+  transform: translateY(-2px);
 }
 
 #languageSelect:focus {
@@ -301,7 +515,8 @@ header .logo img {
   outline-offset: 2px;
 }
 
-/* Footer */
+/* ===== FOOTER ===== */
+/* Barre de pied de page avec logo et liens */
 footer {
   display: flex;
   align-items: center;
@@ -314,13 +529,28 @@ footer {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.3);
+  animation: slideUp 0.6s ease-out 0.1s both;
 }
 
+/* Logo du footer avec animation flottante */
 footer .logo {
   display: block;
   width: 60px;
   height: 60px;
   margin: 0;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 footer .logo img {
@@ -329,6 +559,7 @@ footer .logo img {
   object-fit: contain;
 }
 
+/* Menu liens du footer */
 footer .sub-menu ul {
   display: flex;
   flex-wrap: wrap;
@@ -343,14 +574,32 @@ footer a {
   color: #667eea;
   font-weight: 600;
   font-size: 0.9rem;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   padding: 8px 12px;
   border-radius: 8px;
+  position: relative;
+}
+
+footer a::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 12px;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  transition: width 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border-radius: 2px;
+}
+
+footer a:hover::after {
+  width: calc(100% - 24px);
 }
 
 footer a:hover {
   color: #764ba2;
-  background: rgba(102, 126, 234, 0.1);
+  background: rgba(102, 126, 234, 0.08);
+  transform: translateY(-3px);
 }
 
 footer .menu a {
@@ -367,7 +616,8 @@ footer .menu a:hover {
   background-color: rgba(102, 126, 234, 0.1);
 }
 
-/* Audio player */
+/* ===== LECTEUR AUDIO ===== */
+/* Conteneur de la figure avec lecteur audio */
 figure {
   max-width: 650px;
   margin: 30px auto;
@@ -377,8 +627,18 @@ figure {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.3);
+  animation: slideUp 0.6s ease-out 0.2s both;
+  transition: all 0.3s ease;
 }
 
+figure:hover {
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.15),
+    0 0 30px rgba(102, 126, 234, 0.2);
+  transform: translateY(-3px);
+}
+
+/* Titre du lecteur audio */
 figcaption {
   font-weight: 700;
   color: #333;
@@ -388,14 +648,29 @@ figcaption {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  animation: fadeInLeft 0.5s ease-out 0.2s both;
 }
 
 audio {
   width: 100%;
   border-radius: 8px;
+  transition: all 0.3s ease;
 }
 
-/* Responsive design */
+audio:hover {
+  filter: drop-shadow(0 0 10px rgba(102, 126, 234, 0.4));
+}
+
+audio::-webkit-media-controls-panel {
+  background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.1),
+    rgba(118, 75, 162, 0.1)
+  );
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+/* Design pour tablettes et appareils plus petits */
 @media (max-width: 768px) {
   body {
     padding: 12px;
@@ -491,7 +766,8 @@ audio {
   }
 }
 
-/* Animations */
+/* ===== ANIMATIONS GLOBALES ===== */
+/* Animation d'apparition générale */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -503,8 +779,110 @@ audio {
   }
 }
 
+/* Particules flottantes en arrière-plan */
+/* Première particule flottante */
+@keyframes float-particle-1 {
+  0% {
+    transform: translateY(100vh) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(100px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes float-particle-2 {
+  0% {
+    transform: translateY(100vh) translateX(50px) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(-50px) rotate(-360deg);
+    opacity: 0;
+  }
+}
+
+/* Pseudo-élément pour créer la première particule flottante */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(
+    circle,
+    rgba(102, 126, 234, 0.3) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  animation: float-particle-1 15s linear infinite;
+  pointer-events: none;
+  z-index: 1;
+  left: 10%;
+}
+
+/* Pseudo-élément pour créer la deuxième particule flottante */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(
+    circle,
+    rgba(240, 147, 251, 0.2) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  animation: float-particle-2 20s linear infinite;
+  animation-delay: 5s;
+  pointer-events: none;
+  z-index: 1;
+  left: 80%;
+}
+
+/* Particules qui explosent au clic sur les boutons */
+@keyframes particleExplode {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(
+        calc(cos(var(--angle)) * 100px),
+        calc(sin(var(--angle)) * 100px)
+      )
+      scale(0);
+    opacity: 0;
+  }
+}
+
 .container {
   animation: fadeIn 0.5s ease;
+  position: relative;
+}
+
+/* Effet de lueur au survol du conteneur */
+.container:hover {
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.25),
+    0 0 1px rgba(0, 0, 0, 0.1),
+    0 0 40px rgba(102, 126, 234, 0.2);
 }
 
 figcaption {
@@ -519,10 +897,37 @@ audio {
   width: 90%;
   margin: 0 auto;
   display: block;
-  accent-color: #0ea5a4;
+  accent-color: #667eea;
 }
 
 audio::-webkit-media-controls-panel {
   background-color: transparent;
   border-radius: 0;
+}
+
+/* Respecte les préférences de mouvement réduit */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  body {
+    background: linear-gradient(
+      135deg,
+      #667eea 0%,
+      #764ba2 50%,
+      #f093fb 100%
+    ) !important;
+    background-attachment: scroll !important;
+  }
+
+  header .logo {
+    animation: none !important;
+  }
+
+  footer .logo {
+    animation: none !important;
+  }
 }

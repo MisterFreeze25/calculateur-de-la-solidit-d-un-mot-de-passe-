@@ -28,6 +28,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let currentLanguage = localStorage.getItem("language") || "fr";
 
+  // Fonction pour créer des particules au clic
+  function createClickParticles(event) {
+    const rect = event.target.getBoundingClientRect();
+    const x = rect.left + rect.width / 2;
+    const y = rect.top + rect.height / 2;
+
+    for (let i = 0; i < 6; i++) {
+      const particle = document.createElement("div");
+      particle.style.position = "fixed";
+      particle.style.left = x + "px";
+      particle.style.top = y + "px";
+      particle.style.width = "8px";
+      particle.style.height = "8px";
+      particle.style.backgroundColor = "#667eea";
+      particle.style.borderRadius = "50%";
+      particle.style.pointerEvents = "none";
+      particle.style.zIndex = "9999";
+      particle.style.animation = `particleExplode 0.6s ease-out forwards`;
+      particle.style.setProperty("--angle", i * 60 + "deg");
+      document.body.appendChild(particle);
+
+      setTimeout(() => particle.remove(), 600);
+    }
+  }
+
   const strengthColors = {
     veryStrong: "#2ecc71",
     strong: "#27ae60",
@@ -143,6 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // vérification et bascule en mode "restart"
     checkButton.addEventListener("click", () => {
+      createClickParticles(event);
       const mode = checkButton.dataset.mode || "check";
 
       if (mode === "check") {
