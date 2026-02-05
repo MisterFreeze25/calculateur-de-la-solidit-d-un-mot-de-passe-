@@ -55,6 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
     results.style.color = strengthColors[strengthKey] || "black";
     results.setAttribute("role", "status");
     results.setAttribute("aria-live", "polite");
+    results.setAttribute("aria-atomic", "true");
     results.setAttribute(
       "aria-label",
       `Solidité du mot de passe: ${strengthText}`,
@@ -128,6 +129,7 @@ document.addEventListener("DOMContentLoaded", () => {
     toggle.innerHTML = icon;
     toggle.setAttribute("aria-label", hidden ? showText : hideText);
     toggle.setAttribute("aria-pressed", String(!hidden));
+    toggle.setAttribute("aria-expanded", String(!hidden));
     toggle.setAttribute("type", "button");
     // adapter la taille du SVG selon l'écran
     const small = window.innerWidth <= 480;
@@ -237,6 +239,8 @@ const translations = {
     title: "Calculateur de la solidité d'un mot de passe",
     passwordLabel: "Mot de passe :",
     passwordPlaceholder: "Entrez votre mot de passe",
+    passwordHelp:
+      "Entrez un mot de passe pour vérifier sa solidité. Un bon mot de passe contient des majuscules, des minuscules, des chiffres et des caractères spéciaux.",
     checkButton: "Vérifier la solidité",
     listenMusic: "Écoutez la musique :",
     github: "Mon GitHub",
@@ -258,6 +262,8 @@ const translations = {
     title: "Password Strength Calculator",
     passwordLabel: "Password:",
     passwordPlaceholder: "Enter your password",
+    passwordHelp:
+      "Enter a password to check its strength. A good password contains uppercase letters, lowercase letters, numbers and special characters.",
     checkButton: "Check strength",
     listenMusic: "Listen to the music:",
     github: "My GitHub",
@@ -279,6 +285,8 @@ const translations = {
     title: "Passwortstärke-Rechner",
     passwordLabel: "Passwort:",
     passwordPlaceholder: "Geben Sie Ihr Passwort ein",
+    passwordHelp:
+      "Geben Sie ein Passwort ein, um dessen Stärke zu überprüfen. Ein gutes Passwort enthält Großbuchstaben, Kleinbuchstaben, Zahlen und Sonderzeichen.",
     checkButton: "Stärke prüfen",
     listenMusic: "Musik anhören:",
     github: "Mein GitHub",
@@ -300,6 +308,8 @@ const translations = {
     title: "Calculador de fuerza de contraseña",
     passwordLabel: "Contraseña:",
     passwordPlaceholder: "Ingrese su contraseña",
+    passwordHelp:
+      "Ingrese una contraseña para verificar su fuerza. Una buena contraseña contiene letras mayúsculas, minúsculas, números y caracteres especiales.",
     checkButton: "Verificar fuerza",
     listenMusic: "Escuchar música:",
     github: "Mi GitHub",
@@ -321,6 +331,8 @@ const translations = {
     title: "Calcolatore della forza della password",
     passwordLabel: "Password:",
     passwordPlaceholder: "Inserisci la tua password",
+    passwordHelp:
+      "Inserisci una password per verificarne la forza. Una buona password contiene lettere maiuscole, minuscole, numeri e caratteri speciali.",
     checkButton: "Verifica forza",
     listenMusic: "Ascolta la musica:",
     github: "Il mio GitHub",
@@ -342,6 +354,8 @@ const translations = {
     title: "Calculadora de força de senha",
     passwordLabel: "Senha:",
     passwordPlaceholder: "Digite sua senha",
+    passwordHelp:
+      "Digite uma senha para verificar sua força. Uma boa senha contém letras maiúsculas, minúsculas, números e caracteres especiais.",
     checkButton: "Verificar força",
     listenMusic: "Ouça a música:",
     github: "Meu GitHub",
@@ -363,6 +377,8 @@ const translations = {
     title: "Wachtwoordsterkte Calculator",
     passwordLabel: "Wachtwoord:",
     passwordPlaceholder: "Voer uw wachtwoord in",
+    passwordHelp:
+      "Voer een wachtwoord in om de sterkte te controleren. Een goed wachtwoord bevat hoofdletters, kleine letters, getallen en speciale tekens.",
     checkButton: "Controleer sterkte",
     listenMusic: "Luister naar de muziek:",
     github: "Mijn GitHub",
@@ -384,6 +400,8 @@ const translations = {
     title: "Kalkulator krederion ar geriadur",
     passwordLabel: "Geriadur:",
     passwordPlaceholder: "Entrer ho geriadur",
+    passwordHelp:
+      "Entrer ho geriadur evit gwiriat e grederion. Ur geriadur mat a gouzout a vez brini-gaoz, brini-izel, toudoù hag arzoù izili.",
     checkButton: "Gwiriat krederion",
     listenMusic: "Klevet al leizh :",
     github: "Ma GitHub",
@@ -417,6 +435,14 @@ function setLanguage(lang) {
   document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
     const key = el.getAttribute("data-i18n-placeholder");
     el.placeholder = translations[lang][key];
+  });
+
+  // Aide (SR only text)
+  document.querySelectorAll("[data-i18n]").forEach((el) => {
+    if (el.id === "passwordHelp") {
+      const key = el.getAttribute("data-i18n");
+      el.textContent = translations[lang][key];
+    }
   });
 
   document.documentElement.lang = lang;

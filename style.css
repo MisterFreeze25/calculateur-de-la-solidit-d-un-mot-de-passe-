@@ -5,9 +5,24 @@
   box-sizing: border-box;
 }
 
+/* Classe pour masquer visuellement le texte tout en le gardant accessible aux lecteurs d'écran */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 body {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", sans-serif;
   margin: 0;
   min-height: 100vh;
   color: #222;
@@ -20,7 +35,9 @@ body {
   margin: 40px auto;
   background: rgba(255, 255, 255, 0.98);
   border-radius: 20px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25), 0 0 1px rgba(0, 0, 0, 0.1);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.25),
+    0 0 1px rgba(0, 0, 0, 0.1);
   padding: 48px 32px;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -70,6 +87,13 @@ input[type="text"]:focus {
   box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
 }
 
+/* Améliore la visibilité du focus au clavier */
+input[type="password"]:focus-visible,
+input[type="text"]:focus-visible {
+  outline: 3px solid #667eea;
+  outline-offset: 2px;
+}
+
 /* Buttons */
 button {
   width: 100%;
@@ -96,11 +120,21 @@ button:active {
   transform: translateY(0);
 }
 
+/* Améliore la visibilité du focus au clavier pour les boutons */
+button:focus-visible {
+  outline: 3px solid #667eea;
+  outline-offset: 2px;
+}
+
 /* Result box */
 .result {
   margin-top: 28px;
   padding: 20px 24px;
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.08) 0%, rgba(118, 75, 162, 0.08) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.08) 0%,
+    rgba(118, 75, 162, 0.08) 100%
+  );
   border-radius: 12px;
   border: 2px solid rgba(102, 126, 234, 0.2);
   text-align: center;
@@ -183,6 +217,12 @@ input[type="text"] {
   color: #764ba2;
 }
 
+#togglePassword:focus-visible {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
 #togglePassword svg {
   width: 20px;
   height: 20px;
@@ -254,6 +294,11 @@ header .logo img {
 #languageSelect:focus {
   outline: none;
   border-color: #667eea;
+}
+
+#languageSelect:focus-visible {
+  outline: 3px solid #667eea;
+  outline-offset: 2px;
 }
 
 /* Footer */
