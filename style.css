@@ -578,41 +578,6 @@ footer .menu a:hover {
   background-color: rgba(102, 126, 234, 0.1);
 }
 
-/* ===== LECTEUR AUDIO ===== */
-/* Conteneur de la figure avec lecteur audio */
-figure {
-  max-width: 650px;
-  margin: 30px auto;
-  padding: 28px 32px;
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  animation: slideUp 0.6s ease-out 0.2s both;
-  transition: all 0.3s ease;
-}
-
-figure:hover {
-  box-shadow:
-    0 8px 30px rgba(0, 0, 0, 0.15),
-    0 0 30px rgba(102, 126, 234, 0.2);
-  transform: translateY(-3px);
-}
-
-/* Titre du lecteur audio */
-figcaption {
-  font-weight: 700;
-  color: #333;
-  margin-bottom: 16px;
-  font-size: 1.05rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: fadeInLeft 0.5s ease-out 0.2s both;
-}
-
 /* ===== SECURITY DOCK ===== */
 .security-dock {
   max-width: 650px;
