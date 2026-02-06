@@ -435,7 +435,7 @@ const translations = {
     legalHosting: "Hébergement : Ce site est hébergé par GitHub.",
     legalProperty:
       "Propriété : Le contenu de ce site est destiné à un usage pédagogique.",
-    
+
     privacyTitle: "Politique de confidentialité",
     privacyContent:
       "Collecte : Seules les données saisies volontairement dans le formulaire sont traitées.",
@@ -445,7 +445,7 @@ const translations = {
       "Utilisation : Ces données servent uniquement à la démonstration technique du projet.",
     privacyStorage:
       "Conservation : Aucune donnée n'est stockée à long terme ni revendue.",
-    
+
     backToHome: "Retour à l'accueil",
   },
   en: {
@@ -495,7 +495,7 @@ const translations = {
     legalHosting: "Hosting: This site is hosted by GitHub.",
     legalProperty:
       "Property: The content of this site is intended for educational use.",
-    
+
     privacyTitle: "Privacy Policy",
     privacyContent:
       "Collection: Only data voluntarily entered in the form is processed.",
@@ -504,7 +504,7 @@ const translations = {
     privacyUsage:
       "Usage: This data is only used for the technical demonstration of the project.",
     privacyStorage: "Storage: No data is stored long-term or sold.",
-    
+
     backToHome: "Back to home",
   },
   de: {
@@ -555,7 +555,7 @@ const translations = {
     legalHosting: "Hosting: Diese Seite wird von GitHub gehostet.",
     legalProperty:
       "Eigentum: Der Inhalt dieser Seite ist für Bildungszwecke bestimmt.",
-    
+
     privacyTitle: "Datenschutz-Bestimmungen",
     privacyContent:
       "Sammlung: Es werden nur Daten verarbeitet, die freiwillig in das Formular eingegeben wurden.",
@@ -565,7 +565,7 @@ const translations = {
       "Verwendung: Diese Daten dienen nur der technischen Demonstration des Projekts.",
     privacyStorage:
       "Speicherung: Es werden keine Daten langfristig gespeichert oder verkauft.",
-    
+
     backToHome: "Zurück zur Startseite",
   },
   sp: {
@@ -615,7 +615,7 @@ const translations = {
     legalHosting: "Alojamiento: Este sitio está alojado por GitHub.",
     legalProperty:
       "Propiedad: El contenido de este sitio está destinado para uso educativo.",
-    
+
     privacyTitle: "Política de privacidad",
     privacyContent:
       "Recopilación: Solo se procesan los datos ingresados voluntariamente en el formulario.",
@@ -625,7 +625,7 @@ const translations = {
       "Uso: Estos datos solo se utilizan para la demostración técnica del proyecto.",
     privacyStorage:
       "Almacenamiento: No se almacenan datos a largo plazo ni se venden.",
-    
+
     backToHome: "Volver al inicio",
   },
   it: {
@@ -675,7 +675,7 @@ const translations = {
     legalHosting: "Hosting: Questo sito è ospitato da GitHub.",
     legalProperty:
       "Proprietà: Il contenuto di questo sito è destinato a scopi educativi.",
-    
+
     privacyTitle: "Politica sulla privacy",
     privacyContent:
       "Raccolta: Vengono elaborati solo i dati inseriti volontariamente nel modulo.",
@@ -685,7 +685,7 @@ const translations = {
       "Uso: Questi dati sono utilizzati solo per la dimostrazione tecnica del progetto.",
     privacyStorage:
       "Archiviazione: Nessun dato viene archiviato a lungo termine o venduto.",
-    
+
     backToHome: "Torna alla home",
   },
   pt: {
@@ -735,7 +735,7 @@ const translations = {
     legalHosting: "Hospedagem: Este site é hospedado pelo GitHub.",
     legalProperty:
       "Propriedade: O conteúdo deste site é destinado para uso educacional.",
-    
+
     privacyTitle: "Política de privacidade",
     privacyContent:
       "Coleta: Apenas os dados inseridos voluntariamente no formulário são processados.",
@@ -745,7 +745,7 @@ const translations = {
       "Uso: Esses dados são usados apenas para a demonstração técnica do projeto.",
     privacyStorage:
       "Armazenamento: Nenhum dado é armazenado a longo prazo ou vendido.",
-    
+
     backToHome: "Voltar para o início",
   },
   nl: {
@@ -795,7 +795,7 @@ const translations = {
     legalHosting: "Hosting: Deze site wordt gehost door GitHub.",
     legalProperty:
       "Eigendom: De inhoud van deze site is bedoeld voor educatief gebruik.",
-    
+
     privacyTitle: "Privacybeleid",
     privacyContent:
       "Verzameling: Alleen gegevens die vrijwillig in het formulier zijn ingevoerd, worden verwerkt.",
@@ -805,7 +805,7 @@ const translations = {
       "Gebruik: Deze gegevens worden alleen gebruikt voor de technische demonstratie van het project.",
     privacyStorage:
       "Opslag: Er worden geen gegevens op lange termijn opgeslagen of verkocht.",
-    
+
     backToHome: "Terug naar home",
   },
   br: {
@@ -855,7 +855,7 @@ const translations = {
     legalHosting: "Hébergement : Ar sait se a zo hébergé gant GitHub.",
     legalProperty:
       "Propriété : An danvez eus ar sait se a zo dalc'het evit ur implij pedagogel.",
-    
+
     privacyTitle: "Politik prevezded",
     privacyContent:
       "Collecte : Ne vez traitet nemet an titouroù lakaet gant ar user er form.",
@@ -865,7 +865,7 @@ const translations = {
       "Usage : An titouroù-mañ a vez implijet hepken evit ar skouer teknik eus ar raktres.",
     privacyStorage:
       "Stokadur : Ne vez ket stoket an titouroù evit un hent a-raok.",
-    
+
     backToHome: "Distrei da home",
   },
 };
