@@ -428,6 +428,25 @@ const translations = {
     securityDescription:
       "Un bon mot de passe doit contenir : des majuscules, des minuscules, des chiffres et des caractères spéciaux.",
     learnMore: "En savoir plus",
+
+    legalTitle: "Mentions légales",
+    legalContent:
+      "Éditeur : Ce site est réalisé par MisterFreeze25 dans le cadre d'un projet de Terminale.",
+    legalHosting: "Hébergement : Ce site est hébergé par GitHub.",
+    legalProperty:
+      "Propriété : Le contenu de ce site est destiné à un usage pédagogique.",
+    
+    privacyTitle: "Politique de confidentialité",
+    privacyContent:
+      "Collecte : Seules les données saisies volontairement dans le formulaire sont traitées.",
+    privacyColection:
+      "Collecte : Seules les données saisies volontairement dans le formulaire sont traitées.",
+    privacyUsage:
+      "Utilisation : Ces données servent uniquement à la démonstration technique du projet.",
+    privacyStorage:
+      "Conservation : Aucune donnée n'est stockée à long terme ni revendue.",
+    
+    backToHome: "Retour à l'accueil",
   },
   en: {
     title: "Password Strength Calculator",
@@ -469,6 +488,24 @@ const translations = {
     securityDescription:
       "A good password should contain: uppercase letters, lowercase letters, numbers and special characters.",
     learnMore: "Learn more",
+
+    legalTitle: "Legal Notice",
+    legalContent:
+      "Publisher: This site is created by MisterFreeze25 as part of a Terminale project.",
+    legalHosting: "Hosting: This site is hosted by GitHub.",
+    legalProperty:
+      "Property: The content of this site is intended for educational use.",
+    
+    privacyTitle: "Privacy Policy",
+    privacyContent:
+      "Collection: Only data voluntarily entered in the form is processed.",
+    privacyColection:
+      "Collection: Only data voluntarily entered in the form is processed.",
+    privacyUsage:
+      "Usage: This data is only used for the technical demonstration of the project.",
+    privacyStorage: "Storage: No data is stored long-term or sold.",
+    
+    backToHome: "Back to home",
   },
   de: {
     title: "Passwortstärke-Rechner",
@@ -511,6 +548,25 @@ const translations = {
     securityDescription:
       "Ein gutes Passwort sollte enthalten: Großbuchstaben, Kleinbuchstaben, Zahlen und Sonderzeichen.",
     learnMore: "Mehr erfahren",
+
+    legalTitle: "Rechtlicher Hinweis",
+    legalContent:
+      "Herausgeber: Diese Seite wurde von MisterFreeze25 im Rahmen eines Terminale-Projekts erstellt.",
+    legalHosting: "Hosting: Diese Seite wird von GitHub gehostet.",
+    legalProperty:
+      "Eigentum: Der Inhalt dieser Seite ist für Bildungszwecke bestimmt.",
+    
+    privacyTitle: "Datenschutz-Bestimmungen",
+    privacyContent:
+      "Sammlung: Es werden nur Daten verarbeitet, die freiwillig in das Formular eingegeben wurden.",
+    privacyColection:
+      "Sammlung: Es werden nur Daten verarbeitet, die freiwillig in das Formular eingegeben wurden.",
+    privacyUsage:
+      "Verwendung: Diese Daten dienen nur der technischen Demonstration des Projekts.",
+    privacyStorage:
+      "Speicherung: Es werden keine Daten langfristig gespeichert oder verkauft.",
+    
+    backToHome: "Zurück zur Startseite",
   },
   sp: {
     title: "Calculador de fuerza de contraseña",
@@ -552,6 +608,25 @@ const translations = {
     securityDescription:
       "Una buena contraseña debe contener: letras mayúsculas, letras minúsculas, números y caracteres especiales.",
     learnMore: "Más información",
+
+    legalTitle: "Aviso legal",
+    legalContent:
+      "Editor: Este sitio fue creado por MisterFreeze25 como parte de un proyecto de Terminale.",
+    legalHosting: "Alojamiento: Este sitio está alojado por GitHub.",
+    legalProperty:
+      "Propiedad: El contenido de este sitio está destinado para uso educativo.",
+    
+    privacyTitle: "Política de privacidad",
+    privacyContent:
+      "Recopilación: Solo se procesan los datos ingresados voluntariamente en el formulario.",
+    privacyColection:
+      "Recopilación: Solo se procesan los datos ingresados voluntariamente en el formulario.",
+    privacyUsage:
+      "Uso: Estos datos solo se utilizan para la demostración técnica del proyecto.",
+    privacyStorage:
+      "Almacenamiento: No se almacenan datos a largo plazo ni se venden.",
+    
+    backToHome: "Volver al inicio",
   },
   it: {
     title: "Calcolatore della forza della password",
@@ -593,6 +668,25 @@ const translations = {
     securityDescription:
       "Una buona password deve contenere: lettere maiuscole, lettere minuscole, numeri e caratteri speciali.",
     learnMore: "Ulteriori informazioni",
+
+    legalTitle: "Avviso legale",
+    legalContent:
+      "Editore: Questo sito è stato creato da MisterFreeze25 come parte di un progetto di Terminale.",
+    legalHosting: "Hosting: Questo sito è ospitato da GitHub.",
+    legalProperty:
+      "Proprietà: Il contenuto di questo sito è destinato a scopi educativi.",
+    
+    privacyTitle: "Politica sulla privacy",
+    privacyContent:
+      "Raccolta: Vengono elaborati solo i dati inseriti volontariamente nel modulo.",
+    privacyColection:
+      "Raccolta: Vengono elaborati solo i dati inseriti volontariamente nel modulo.",
+    privacyUsage:
+      "Uso: Questi dati sono utilizzati solo per la dimostrazione tecnica del progetto.",
+    privacyStorage:
+      "Archiviazione: Nessun dato viene archiviato a lungo termine o venduto.",
+    
+    backToHome: "Torna alla home",
   },
   pt: {
     title: "Calculadora de força de senha",
@@ -634,6 +728,25 @@ const translations = {
     securityDescription:
       "Uma boa senha deve conter: letras maiúsculas, letras minúsculas, números e caracteres especiais.",
     learnMore: "Saiba mais",
+
+    legalTitle: "Aviso legal",
+    legalContent:
+      "Editor: Este site foi criado por MisterFreeze25 como parte de um projeto de Terminale.",
+    legalHosting: "Hospedagem: Este site é hospedado pelo GitHub.",
+    legalProperty:
+      "Propriedade: O conteúdo deste site é destinado para uso educacional.",
+    
+    privacyTitle: "Política de privacidade",
+    privacyContent:
+      "Coleta: Apenas os dados inseridos voluntariamente no formulário são processados.",
+    privacyColection:
+      "Coleta: Apenas os dados inseridos voluntariamente no formulário são processados.",
+    privacyUsage:
+      "Uso: Esses dados são usados apenas para a demonstração técnica do projeto.",
+    privacyStorage:
+      "Armazenamento: Nenhum dado é armazenado a longo prazo ou vendido.",
+    
+    backToHome: "Voltar para o início",
   },
   nl: {
     title: "Wachtwoordsterkte Calculator",
@@ -675,6 +788,25 @@ const translations = {
     securityDescription:
       "Een goed wachtwoord moet bevatten: hoofdletters, kleine letters, nummers en speciale tekens.",
     learnMore: "Meer informatie",
+
+    legalTitle: "Juridische kennisgeving",
+    legalContent:
+      "Uitgever: Deze site is gemaakt door MisterFreeze25 als onderdeel van een Terminale-project.",
+    legalHosting: "Hosting: Deze site wordt gehost door GitHub.",
+    legalProperty:
+      "Eigendom: De inhoud van deze site is bedoeld voor educatief gebruik.",
+    
+    privacyTitle: "Privacybeleid",
+    privacyContent:
+      "Verzameling: Alleen gegevens die vrijwillig in het formulier zijn ingevoerd, worden verwerkt.",
+    privacyColection:
+      "Verzameling: Alleen gegevens die vrijwillig in het formulier zijn ingevoerd, worden verwerkt.",
+    privacyUsage:
+      "Gebruik: Deze gegevens worden alleen gebruikt voor de technische demonstratie van het project.",
+    privacyStorage:
+      "Opslag: Er worden geen gegevens op lange termijn opgeslagen of verkocht.",
+    
+    backToHome: "Terug naar home",
   },
   br: {
     title: "Kalkulator krederion ar geriadur",
@@ -716,6 +848,25 @@ const translations = {
     securityDescription:
       "Ur geriadur mat a rankfe kaout : lizherennoù bras, lizherennoù bihan, niverou ha arzoù special.",
     learnMore: "Gouzout an nemet",
+
+    legalTitle: "Notenn reizh",
+    legalContent:
+      "Embanner : Ar sait se a zo graet gant MisterFreeze25 e-keñver ur raktres Terminale.",
+    legalHosting: "Hébergement : Ar sait se a zo hébergé gant GitHub.",
+    legalProperty:
+      "Propriété : An danvez eus ar sait se a zo dalc'het evit ur implij pedagogel.",
+    
+    privacyTitle: "Politik prevezded",
+    privacyContent:
+      "Collecte : Ne vez traitet nemet an titouroù lakaet gant ar user er form.",
+    privacyColection:
+      "Collecte : Ne vez traitet nemet an titouroù lakaet gant ar user er form.",
+    privacyUsage:
+      "Usage : An titouroù-mañ a vez implijet hepken evit ar skouer teknik eus ar raktres.",
+    privacyStorage:
+      "Stokadur : Ne vez ket stoket an titouroù evit un hent a-raok.",
+    
+    backToHome: "Distrei da home",
   },
 };
 
