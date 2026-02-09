@@ -935,3 +935,12 @@ audio::-webkit-media-controls-panel {
     animation: none !important;
   }
 }
+
+.text-muted {
+  color: rgb(85, 85, 85);
+}
+
+.legal-label {
+  color: #7b2cbf;
+  font-weight: 600;
+}
