@@ -7,69 +7,93 @@
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
-    <header class="mb" role="banner">
-      <p class="logo">
-        <img
-          src="./assets/Logo chien.png"
-          alt="Logo du calculateur de solidité de mot de passe"
-        />
-      </p>
-      <select id="languageSelect" aria-label="Sélection de la langue">
-        <option value="fr">Français</option>
-        <option value="en">English</option>
-        <option value="de">Deutsch</option>
-        <option value="sp">Spanish</option>
-        <option value="it">Italiano</option>
-        <option value="pt">Português</option>
-        <option value="nl">Nederlands</option>
-        <option value="br">Breton</option>
-      </select>
-    </header>
-    <body>
+  <header class="mb" role="banner">
+    <p class="logo">
+      <img
+        src="./assets/Logo chien.png"
+        alt="Logo du calculateur de solidité de mot de passe"
+      />
+    </p>
+    <select id="languageSelect" aria-label="Sélection de la langue">
+      <option value="fr">Français</option>
+      <option value="en">English</option>
+      <option value="de">Deutsch</option>
+      <option value="sp">Spanish</option>
+      <option value="it">Italiano</option>
+      <option value="pt">Português</option>
+      <option value="nl">Nederlands</option>
+      <option value="br">Breton</option>
+    </select>
+  </header>
+  <body>
     <div class="container">
-      <h1 data-i18n="legalTitle">Mentions Légales</h1>
-      <p class="text-muted" data-i18n="legalContent">
-        Éditeur : Ce site est réalisé par MisterFreeze25 dans le cadre d'un
-        projet de Terminale.
+      <h1 data-i18n="aboutCreditsTitle">À propos & crédits</h1>
+
+      <p class="text-muted" data-i18n="aboutCreator">
+        Créateur : Ce site a été conçu et développé par MisterFreeze25 dans le
+        cadre d'un projet scolaire de classe de Terminale. L'objectif était de
+        créer un outil web pratique combinant plusieurs disciplines académiques.
       </p>
-      <p class="text-muted" data-i18n="legalHosting">
-        Hébergement : Ce site est hébergé par GitHub.
+
+      <p class="text-muted" data-i18n="aboutProject">
+        Projet : Il s'agit d'un calculateur de solidité de mots de passe qui
+        permet à l'utilisateur d'entrer un mot de passe et d'obtenir une
+        estimation de sa sécurité. L'analyse se base sur la longueur du mot de
+        passe et la diversité des caractères utilisés (majuscules, minuscules,
+        chiffres et symboles spéciaux). Plus le nombre de combinaisons possibles
+        est élevé, plus le mot de passe est difficile à deviner.
       </p>
-      <p class="text-muted" data-i18n="legalProperty">
-        Propriété : Le contenu de ce site est destiné à un usage pédagogique.
+
+      <p class="text-muted" data-i18n="aboutSubjects">
+        Disciplines : Ce projet mobilise plusieurs matières. Les mathématiques
+        et les sciences sont utilisées à travers les probabilités et la
+        combinatoire pour calculer le nombre de combinaisons possibles. La
+        technologie est présente avec l'utilisation de HTML pour la structure,
+        CSS pour le design et JavaScript pour les calculs et l'interactivité.
       </p>
+
+      <p class="text-muted" data-i18n="aboutHosting">
+        Hébergement : Ce site est hébergé gratuitement sur GitHub Pages, une
+        plateforme permettant de publier des sites web statiques directement
+        depuis un dépôt GitHub.
+      </p>
+
+      <p class="text-muted" data-i18n="aboutPurpose">
+        Objectif : Le contenu de ce site est destiné exclusivement à un usage
+        pédagogique et éducatif. Il vise à sensibiliser aux bonnes pratiques en
+        matière de sécurité des mots de passe.
+      </p>
+
       <a href="index.html" class="security-link" data-i18n="backToHome">
         Retour à l'accueil
       </a>
     </div>
-    </body>
-    <footer role="contentinfo">
-      <img
-        class="logo"
-        src="./assets/Logo chien.png"
-        alt="Logo du calculateur de solidité de mot de passe - pied de page"
-      />
-      <nav class="sub-menu">
-        <ul>
-          <li>
-            <a href="https://github.com/MisterFreeze25" data-i18n="github"
-              >Mon GitHub</a
-            >
-          </li>
-          <li>
-            <a href="mentions.html" data-i18n="legalNotice">Mentions légales</a>
-          </li>
-          <li>
-            <a href="confidentialite.html" data-i18n="privacyPolicy"
-              >Politique de confidentialité</a
-            >
-          </li>
-          <li>
-            <a href="credits.html" data-i18n="aboutCredits"
-              >À propos & crédits</a
-            >
-          </li>
-        </ul>
-      </nav>
-    </footer>
+  </body>
+  <footer role="contentinfo">
+    <img
+      class="logo"
+      src="./assets/Logo chien.png"
+      alt="Logo du calculateur de solidité de mot de passe - pied de page"
+    />
+    <nav class="sub-menu">
+      <ul>
+        <li>
+          <a href="https://github.com/MisterFreeze25" data-i18n="github"
+            >Mon GitHub</a
+          >
+        </li>
+        <li>
+          <a href="mentions.html" data-i18n="legalNotice">Mentions légales</a>
+        </li>
+        <li>
+          <a href="confidentialite.html" data-i18n="privacyPolicy"
+            >Politique de confidentialité</a
+          >
+        </li>
+        <li>
+          <a href="credits.html" data-i18n="aboutCredits">À propos & crédits</a>
+        </li>
+      </ul>
+    </nav>
+  </footer>
 </html>
