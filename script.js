@@ -480,7 +480,7 @@ const translations = {
       "Activer l'authentification à double facteur pour ajouter une couche de sécurité supplémentaire.",
     passwordTestStrength:
       "Vérifier régulièrement la solidité de ses mots de passe à l'aide d'outils adaptés.",
-   
+
     aboutCreditsTitle: "À propos & crédits",
     aboutCreator:
       "Créateur : Ce site a été conçu et développé par MisterFreeze25 dans le cadre d'un projet scolaire de classe de Terminale. L'objectif était de créer un outil web pratique combinant plusieurs disciplines académiques.",
@@ -488,8 +488,6 @@ const translations = {
       "Projet : Il s'agit d'un calculateur de solidité de mots de passe qui permet à l'utilisateur d'entrer un mot de passe et d'obtenir une estimation de sa sécurité. L'analyse se base sur la longueur du mot de passe et la diversité des caractères utilisés (majuscules, minuscules, chiffres et symboles spéciaux). Plus le nombre de combinaisons possibles est élevé, plus le mot de passe est difficile à deviner.",
     aboutSubjects:
       "Disciplines : Ce projet mobilise plusieurs matières. Les mathématiques et les sciences sont utilisées à travers les probabilités et la combinatoire pour calculer le nombre de combinaisons possibles. La technologie est présente avec l'utilisation de HTML pour la structure, CSS pour le design et JavaScript pour les calculs et l'interactivité.",
-    aboutHosting:
-      "Hébergement : Ce site est hébergé gratuitement sur GitHub Pages, une plateforme permettant de publier des sites web statiques directement depuis un dépôt GitHub.",
     aboutPurpose:
       "Objectif : Le contenu de ce site est destiné exclusivement à un usage pédagogique et éducatif. Il vise à sensibiliser aux bonnes pratiques en matière de sécurité des mots de passe.",
   },
@@ -586,11 +584,14 @@ const translations = {
       "Regularly check the strength of your passwords using appropriate tools.",
 
     aboutCreditsTitle: "About & Credits",
-    aboutCreator: "Creator: This website was designed and developed by MisterFreeze25 as part of a high school senior year project. The goal was to create a practical web tool combining several academic disciplines.",
-    aboutProject: "Project: This is a password strength calculator that allows users to enter a password and get an estimate of its security. The analysis is based on the password length and the diversity of characters used (uppercase, lowercase, numbers and special symbols). The higher the number of possible combinations, the harder the password is to guess.",
-    aboutSubjects: "Disciplines: This project combines several subjects. Mathematics and science are used through probabilities and combinatorics to calculate the number of possible combinations. Technology is present with the use of HTML for structure, CSS for design and JavaScript for calculations and interactivity.",
-    aboutHosting: "Hosting: This site is hosted for free on GitHub Pages, a platform for publishing static websites directly from a GitHub repository.",
-    aboutPurpose: "Purpose: The content of this site is intended exclusively for educational and pedagogical use. It aims to raise awareness of good practices in password security.",
+    aboutCreator:
+      "Creator: This website was designed and developed by MisterFreeze25 as part of a high school senior year project. The goal was to create a practical web tool combining several academic disciplines.",
+    aboutProject:
+      "Project: This is a password strength calculator that allows users to enter a password and get an estimate of its security. The analysis is based on the password length and the diversity of characters used (uppercase, lowercase, numbers and special symbols). The higher the number of possible combinations, the harder the password is to guess.",
+    aboutSubjects:
+      "Disciplines: This project combines several subjects. Mathematics and science are used through probabilities and combinatorics to calculate the number of possible combinations. Technology is present with the use of HTML for structure, CSS for design and JavaScript for calculations and interactivity.",
+    aboutPurpose:
+      "Purpose: The content of this site is intended exclusively for educational and pedagogical use. It aims to raise awareness of good practices in password security.",
   },
   de: {
     title: "Passwortstärke-Rechner",
@@ -685,13 +686,16 @@ const translations = {
       "Aktivieren Sie die Zwei-Faktor-Authentifizierung, um eine zusätzliche Sicherheitsebene hinzuzufügen.",
     passwordTestStrength:
       "Überprüfen Sie regelmäßig die Stärke Ihrer Passwörter mit geeigneten Tools.",
-      
+
     aboutCreditsTitle: "Über & Credits",
-    aboutCreator: "Ersteller: Diese Website wurde von MisterFreeze25 im Rahmen eines Abschlussprojekts der Oberstufe entworfen und entwickelt. Das Ziel war es, ein praktisches Web-Tool zu erstellen, das mehrere akademische Disziplinen kombiniert.",
-    aboutProject: "Projekt: Dies ist ein Passwort-Stärke-Rechner, der es Benutzern ermöglicht, ein Passwort einzugeben und eine Schätzung seiner Sicherheit zu erhalten. Die Analyse basiert auf der Passwortlänge und der Vielfalt der verwendeten Zeichen (Großbuchstaben, Kleinbuchstaben, Zahlen und Sonderzeichen). Je höher die Anzahl möglicher Kombinationen, desto schwieriger ist das Passwort zu erraten.",
-    aboutSubjects: "Disziplinen: Dieses Projekt vereint mehrere Fächer. Mathematik und Naturwissenschaften werden durch Wahrscheinlichkeitsrechnung und Kombinatorik verwendet, um die Anzahl möglicher Kombinationen zu berechnen. Technologie ist mit der Verwendung von HTML für die Struktur, CSS für das Design und JavaScript für Berechnungen und Interaktivität präsent.",
-    aboutHosting: "Hosting: Diese Website wird kostenlos auf GitHub Pages gehostet, einer Plattform zur Veröffentlichung statischer Websites direkt aus einem GitHub-Repository.",
-    aboutPurpose: "Zweck: Der Inhalt dieser Website ist ausschließlich für pädagogische und bildende Zwecke bestimmt. Er zielt darauf ab, das Bewusstsein für gute Praktiken in der Passwortsicherheit zu schärfen.",
+    aboutCreator:
+      "Ersteller: Diese Website wurde von MisterFreeze25 im Rahmen eines Abschlussprojekts der Oberstufe entworfen und entwickelt. Das Ziel war es, ein praktisches Web-Tool zu erstellen, das mehrere akademische Disziplinen kombiniert.",
+    aboutProject:
+      "Projekt: Dies ist ein Passwort-Stärke-Rechner, der es Benutzern ermöglicht, ein Passwort einzugeben und eine Schätzung seiner Sicherheit zu erhalten. Die Analyse basiert auf der Passwortlänge und der Vielfalt der verwendeten Zeichen (Großbuchstaben, Kleinbuchstaben, Zahlen und Sonderzeichen). Je höher die Anzahl möglicher Kombinationen, desto schwieriger ist das Passwort zu erraten.",
+    aboutSubjects:
+      "Disziplinen: Dieses Projekt vereint mehrere Fächer. Mathematik und Naturwissenschaften werden durch Wahrscheinlichkeitsrechnung und Kombinatorik verwendet, um die Anzahl möglicher Kombinationen zu berechnen. Technologie ist mit der Verwendung von HTML für die Struktur, CSS für das Design und JavaScript für Berechnungen und Interaktivität präsent.",
+    aboutPurpose:
+      "Zweck: Der Inhalt dieser Website ist ausschließlich für pädagogische und bildende Zwecke bestimmt. Er zielt darauf ab, das Bewusstsein für gute Praktiken in der Passwortsicherheit zu schärfen.",
   },
   sp: {
     title: "Calculador de fuerza de contraseña",
@@ -785,13 +789,16 @@ const translations = {
       "Active la autenticación de dos factores para agregar una capa adicional de seguridad.",
     passwordTestStrength:
       "Verifique regularmente la solidez de sus contraseñas con herramientas adecuadas.",
-    
+
     aboutCreditsTitle: "Acerca de & Créditos",
-    aboutCreator: "Creador: Este sitio web fue diseñado y desarrollado por MisterFreeze25 como parte de un proyecto escolar de último año de bachillerato. El objetivo era crear una herramienta web práctica que combinara varias disciplinas académicas.",
-    aboutProject: "Proyecto: Se trata de una calculadora de solidez de contraseñas que permite al usuario introducir una contraseña y obtener una estimación de su seguridad. El análisis se basa en la longitud de la contraseña y la diversidad de caracteres utilizados (mayúsculas, minúsculas, números y símbolos especiales). Cuanto mayor sea el número de combinaciones posibles, más difícil será adivinar la contraseña.",
-    aboutSubjects: "Disciplinas: Este proyecto moviliza varias materias. Las matemáticas y las ciencias se utilizan a través de probabilidades y combinatoria para calcular el número de combinaciones posibles. La tecnología está presente con el uso de HTML para la estructura, CSS para el diseño y JavaScript para los cálculos y la interactividad.",
-    aboutHosting: "Alojamiento: Este sitio está alojado gratuitamente en GitHub Pages, una plataforma que permite publicar sitios web estáticos directamente desde un repositorio de GitHub.",
-    aboutPurpose: "Objetivo: El contenido de este sitio está destinado exclusivamente a un uso pedagógico y educativo. Su objetivo es sensibilizar sobre las buenas prácticas en materia de seguridad de contraseñas.",
+    aboutCreator:
+      "Creador: Este sitio web fue diseñado y desarrollado por MisterFreeze25 como parte de un proyecto escolar de último año de bachillerato. El objetivo era crear una herramienta web práctica que combinara varias disciplinas académicas.",
+    aboutProject:
+      "Proyecto: Se trata de una calculadora de solidez de contraseñas que permite al usuario introducir una contraseña y obtener una estimación de su seguridad. El análisis se basa en la longitud de la contraseña y la diversidad de caracteres utilizados (mayúsculas, minúsculas, números y símbolos especiales). Cuanto mayor sea el número de combinaciones posibles, más difícil será adivinar la contraseña.",
+    aboutSubjects:
+      "Disciplinas: Este proyecto moviliza varias materias. Las matemáticas y las ciencias se utilizan a través de probabilidades y combinatoria para calcular el número de combinaciones posibles. La tecnología está presente con el uso de HTML para la estructura, CSS para el diseño y JavaScript para los cálculos y la interactividad.",
+    aboutPurpose:
+      "Objetivo: El contenido de este sitio está destinado exclusivamente a un uso pedagógico y educativo. Su objetivo es sensibilizar sobre las buenas prácticas en materia de seguridad de contraseñas.",
   },
   it: {
     title: "Calcolatore della forza della password",
@@ -885,13 +892,16 @@ const translations = {
       "Attivare l'autenticazione a due fattori per aggiungere un ulteriore livello di sicurezza.",
     passwordTestStrength:
       "Verificare regolarmente la solidità delle proprie password con strumenti appropriati.",
-    
+
     aboutCreditsTitle: "Informazioni & Crediti",
-    aboutCreator: "Creatore: Questo sito è stato progettato e sviluppato da MisterFreeze25 nell'ambito di un progetto scolastico dell'ultimo anno di liceo. L'obiettivo era creare uno strumento web pratico che combinasse diverse discipline accademiche.",
-    aboutProject: "Progetto: Si tratta di un calcolatore di robustezza delle password che permette all'utente di inserire una password e ottenere una stima della sua sicurezza. L'analisi si basa sulla lunghezza della password e sulla diversità dei caratteri utilizzati (maiuscole, minuscole, numeri e simboli speciali). Maggiore è il numero di combinazioni possibili, più difficile è indovinare la password.",
-    aboutSubjects: "Discipline: Questo progetto coinvolge diverse materie. La matematica e le scienze sono utilizzate attraverso probabilità e combinatoria per calcolare il numero di combinazioni possibili. La tecnologia è presente con l'uso di HTML per la struttura, CSS per il design e JavaScript per i calcoli e l'interattività.",
-    aboutHosting: "Hosting: Questo sito è ospitato gratuitamente su GitHub Pages, una piattaforma che consente di pubblicare siti web statici direttamente da un repository GitHub.",
-    aboutPurpose: "Obiettivo: Il contenuto di questo sito è destinato esclusivamente ad un uso pedagogico ed educativo. Mira a sensibilizzare sulle buone pratiche in materia di sicurezza delle password.",
+    aboutCreator:
+      "Creatore: Questo sito è stato progettato e sviluppato da MisterFreeze25 nell'ambito di un progetto scolastico dell'ultimo anno di liceo. L'obiettivo era creare uno strumento web pratico che combinasse diverse discipline accademiche.",
+    aboutProject:
+      "Progetto: Si tratta di un calcolatore di robustezza delle password che permette all'utente di inserire una password e ottenere una stima della sua sicurezza. L'analisi si basa sulla lunghezza della password e sulla diversità dei caratteri utilizzati (maiuscole, minuscole, numeri e simboli speciali). Maggiore è il numero di combinazioni possibili, più difficile è indovinare la password.",
+    aboutSubjects:
+      "Discipline: Questo progetto coinvolge diverse materie. La matematica e le scienze sono utilizzate attraverso probabilità e combinatoria per calcolare il numero di combinazioni possibili. La tecnologia è presente con l'uso di HTML per la struttura, CSS per il design e JavaScript per i calcoli e l'interattività.",
+    aboutPurpose:
+      "Obiettivo: Il contenuto di questo sito è destinato esclusivamente ad un uso pedagogico ed educativo. Mira a sensibilizzare sulle buone pratiche in materia di sicurezza delle password.",
   },
   pt: {
     title: "Calculadora de força de senha",
@@ -987,11 +997,14 @@ const translations = {
       "Verifique regularmente a força de suas senhas com ferramentas apropriadas.",
 
     aboutCreditsTitle: "Sobre & Créditos",
-    aboutCreator: "Criador: Este site foi projetado e desenvolvido por MisterFreeze25 como parte de um projeto escolar do último ano do ensino médio. O objetivo era criar uma ferramenta web prática que combinasse várias disciplinas acadêmicas.",
-    aboutProject: "Projeto: Este é um calculador de força de senhas que permite ao usuário inserir uma senha e obter uma estimativa de sua segurança. A análise é baseada no comprimento da senha e na diversidade de caracteres usados (maiúsculas, minúsculas, números e símbolos especiais). Quanto maior o número de combinações possíveis, mais difícil é adivinhar a senha.",
-    aboutSubjects: "Disciplinas: Este projeto mobiliza várias matérias. A matemática e as ciências são usadas através de probabilidades e combinatória para calcular o número de combinações possíveis. A tecnologia está presente com o uso de HTML para a estrutura, CSS para o design e JavaScript para os cálculos e a interatividade.",
-    aboutHosting: "Hospedagem: Este site está hospedado gratuitamente no GitHub Pages, uma plataforma que permite publicar sites estáticos diretamente de um repositório GitHub.",
-    aboutPurpose: "Objetivo: O conteúdo deste site é destinado exclusivamente para uso pedagógico e educacional. Visa conscientizar sobre as boas práticas em segurança de senhas.",
+    aboutCreator:
+      "Criador: Este site foi projetado e desenvolvido por MisterFreeze25 como parte de um projeto escolar do último ano do ensino médio. O objetivo era criar uma ferramenta web prática que combinasse várias disciplinas acadêmicas.",
+    aboutProject:
+      "Projeto: Este é um calculador de força de senhas que permite ao usuário inserir uma senha e obter uma estimativa de sua segurança. A análise é baseada no comprimento da senha e na diversidade de caracteres usados (maiúsculas, minúsculas, números e símbolos especiais). Quanto maior o número de combinações possíveis, mais difícil é adivinhar a senha.",
+    aboutSubjects:
+      "Disciplinas: Este projeto mobiliza várias matérias. A matemática e as ciências são usadas através de probabilidades e combinatória para calcular o número de combinações possíveis. A tecnologia está presente com o uso de HTML para a estrutura, CSS para o design e JavaScript para os cálculos e a interatividade.",
+    aboutPurpose:
+      "Objetivo: O conteúdo deste site é destinado exclusivamente para uso pedagógico e educacional. Visa conscientizar sobre as boas práticas em segurança de senhas.",
   },
   nl: {
     title: "Wachtwoordsterkte Calculator",
@@ -1087,11 +1100,14 @@ const translations = {
       "Controleer regelmatig de sterkte van je wachtwoorden met geschikte tools.",
 
     aboutCreditsTitle: "Over & Credits",
-    aboutCreator: "Maker: Deze website werd ontworpen en ontwikkeld door MisterFreeze25 als onderdeel van een eindexamenproject. Het doel was om een praktische webtool te maken die verschillende academische disciplines combineert.",
-    aboutProject: "Project: Dit is een wachtwoordsterkteberekening die gebruikers in staat stelt een wachtwoord in te voeren en een schatting van de beveiliging te krijgen. De analyse is gebaseerd op de wachtwoordlengte en de diversiteit van gebruikte tekens (hoofdletters, kleine letters, cijfers en speciale symbolen). Hoe hoger het aantal mogelijke combinaties, hoe moeilijker het wachtwoord te raden is.",
-    aboutSubjects: "Disciplines: Dit project combineert verschillende vakken. Wiskunde en wetenschap worden gebruikt via kansberekening en combinatoriek om het aantal mogelijke combinaties te berekenen. Technologie is aanwezig met het gebruik van HTML voor de structuur, CSS voor het ontwerp en JavaScript voor berekeningen en interactiviteit.",
-    aboutHosting: "Hosting: Deze site wordt gratis gehost op GitHub Pages, een platform voor het publiceren van statische websites rechtstreeks vanuit een GitHub-repository.",
-    aboutPurpose: "Doel: De inhoud van deze site is uitsluitend bedoeld voor educatief en pedagogisch gebruik. Het is bedoeld om bewustzijn te creëren over goede praktijken op het gebied van wachtwoordbeveiliging.",
+    aboutCreator:
+      "Maker: Deze website werd ontworpen en ontwikkeld door MisterFreeze25 als onderdeel van een eindexamenproject. Het doel was om een praktische webtool te maken die verschillende academische disciplines combineert.",
+    aboutProject:
+      "Project: Dit is een wachtwoordsterkteberekening die gebruikers in staat stelt een wachtwoord in te voeren en een schatting van de beveiliging te krijgen. De analyse is gebaseerd op de wachtwoordlengte en de diversiteit van gebruikte tekens (hoofdletters, kleine letters, cijfers en speciale symbolen). Hoe hoger het aantal mogelijke combinaties, hoe moeilijker het wachtwoord te raden is.",
+    aboutSubjects:
+      "Disciplines: Dit project combineert verschillende vakken. Wiskunde en wetenschap worden gebruikt via kansberekening en combinatoriek om het aantal mogelijke combinaties te berekenen. Technologie is aanwezig met het gebruik van HTML voor de structuur, CSS voor het ontwerp en JavaScript voor berekeningen en interactiviteit.",
+    aboutPurpose:
+      "Doel: De inhoud van deze site is uitsluitend bedoeld voor educatief en pedagogisch gebruik. Het is bedoeld om bewustzijn te creëren over goede praktijken op het gebied van wachtwoordbeveiliging.",
   },
   br: {
     title: "Kalkulator krederion ar geriadur",
@@ -1187,11 +1203,14 @@ const translations = {
       "Gwiriañ alies kreñvder ho kerioù-tremes gant ostilhoù azas.",
 
     aboutCreditsTitle: "Diwar-benn & Kredoù",
-    aboutCreator: "Krouer: Ar witrouezh-mañ a zo bet ereoù ha diorroet gant MisterFreeze25 en-dro d'ur raktres skol blezh-fin. Ar pal a oa krouiñ un ostilh web praktik o kenskeudet meur a zanvez-skol.",
-    aboutProject: "Raktres: Ur jediñer kreñvder gerioù-tremen eo heman a ro tu d'an implijer merkañ ur ger-tremen ha kaout un estim eus e surentez. An dezrann a zo diazezet war hed ar ger-tremen ha liested an arouezennoù implijet (pennlizheroù, bihanlizheroù, niverennoù ha merkoù ispisial). Uheloc'h eo an niver a gemmaduoù posupl, diaesoc'h eo divout ar ger-tremen.",
-    aboutSubjects: "Danvezioù: Ar raktres-mañ a laka en-dro meur a zanvez. Ar matematikoù hag ar skiantoù a zo implijet dre brobabilidigezh ha kenaozadur evit jediñ an niver a gemmaduoù posupl. An teknikadurezh a zo anezhañ gant implij HTML evit ar framm, CSS evit an design ha JavaScript evit ar jediñoù hag an etrewezhiañ.",
-    aboutHosting: "Herberc'hiañ: Al lec'hienn-mañ a zo herberc'hiet digoust war GitHub Pages, ur spletad hag a ro tu da embann lec'hiennoù web statek war-eeun adalek ur repository GitHub.",
-    aboutPurpose: "Pal: Danvez al lec'hienn-mañ a zo bet graet evit un implij kelennadurel hag deskadurel hepken. E pal eo lakaat tud da vezañ war evezh eus pratikoù mat e-keñver surentez ar gerioù-tremen.",
+    aboutCreator:
+      "Krouer: Ar witrouezh-mañ a zo bet ereoù ha diorroet gant MisterFreeze25 en-dro d'ur raktres skol blezh-fin. Ar pal a oa krouiñ un ostilh web praktik o kenskeudet meur a zanvez-skol.",
+    aboutProject:
+      "Raktres: Ur jediñer kreñvder gerioù-tremen eo heman a ro tu d'an implijer merkañ ur ger-tremen ha kaout un estim eus e surentez. An dezrann a zo diazezet war hed ar ger-tremen ha liested an arouezennoù implijet (pennlizheroù, bihanlizheroù, niverennoù ha merkoù ispisial). Uheloc'h eo an niver a gemmaduoù posupl, diaesoc'h eo divout ar ger-tremen.",
+    aboutSubjects:
+      "Danvezioù: Ar raktres-mañ a laka en-dro meur a zanvez. Ar matematikoù hag ar skiantoù a zo implijet dre brobabilidigezh ha kenaozadur evit jediñ an niver a gemmaduoù posupl. An teknikadurezh a zo anezhañ gant implij HTML evit ar framm, CSS evit an design ha JavaScript evit ar jediñoù hag an etrewezhiañ.",
+    aboutPurpose:
+      "Pal: Danvez al lec'hienn-mañ a zo bet graet evit un implij kelennadurel hag deskadurel hepken. E pal eo lakaat tud da vezañ war evezh eus pratikoù mat e-keñver surentez ar gerioù-tremen.",
   },
 };
 
