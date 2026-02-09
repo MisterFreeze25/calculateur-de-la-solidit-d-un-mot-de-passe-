@@ -438,7 +438,7 @@ const translations = {
 
     privacyTitle: "Politique de confidentialité",
     privacyContent:
-      "Collecte : Seules les données saisies volontairement dans le formulaire sont traitées.",
+      "Conformément au RGPD, voici les informations concernant vos données :",
     privacyColection:
       "Collecte : Seules les données saisies volontairement dans le formulaire sont traitées.",
     privacyUsage:
@@ -498,7 +498,7 @@ const translations = {
 
     privacyTitle: "Privacy Policy",
     privacyContent:
-      "Collection: Only data voluntarily entered in the form is processed.",
+      "In accordance with GDPR, here is the information regarding your data:",
     privacyColection:
       "Collection: Only data voluntarily entered in the form is processed.",
     privacyUsage:
@@ -558,7 +558,7 @@ const translations = {
 
     privacyTitle: "Datenschutz-Bestimmungen",
     privacyContent:
-      "Sammlung: Es werden nur Daten verarbeitet, die freiwillig in das Formular eingegeben wurden.",
+      "In Übereinstimmung mit der DSGVO, hier sind die Informationen zu Ihren Daten:",
     privacyColection:
       "Sammlung: Es werden nur Daten verarbeitet, die freiwillig in das Formular eingegeben wurden.",
     privacyUsage:
@@ -618,7 +618,7 @@ const translations = {
 
     privacyTitle: "Política de privacidad",
     privacyContent:
-      "Recopilación: Solo se procesan los datos ingresados voluntariamente en el formulario.",
+      "De acuerdo con el RGPD, aquí está la información sobre sus datos:",
     privacyColection:
       "Recopilación: Solo se procesan los datos ingresados voluntariamente en el formulario.",
     privacyUsage:
@@ -678,7 +678,7 @@ const translations = {
 
     privacyTitle: "Politica sulla privacy",
     privacyContent:
-      "Raccolta: Vengono elaborati solo i dati inseriti volontariamente nel modulo.",
+      "In conformità con il GDPR, ecco le informazioni riguardanti i tuoi dati:",
     privacyColection:
       "Raccolta: Vengono elaborati solo i dati inseriti volontariamente nel modulo.",
     privacyUsage:
@@ -738,7 +738,7 @@ const translations = {
 
     privacyTitle: "Política de privacidade",
     privacyContent:
-      "Coleta: Apenas os dados inseridos voluntariamente no formulário são processados.",
+      "Conforme o RGPD, aqui estão as informações sobre seus dados:",
     privacyColection:
       "Coleta: Apenas os dados inseridos voluntariamente no formulário são processados.",
     privacyUsage:
@@ -798,7 +798,7 @@ const translations = {
 
     privacyTitle: "Privacybeleid",
     privacyContent:
-      "Verzameling: Alleen gegevens die vrijwillig in het formulier zijn ingevoerd, worden verwerkt.",
+      "In overeenstemming met de AVG, hier is de informatie over uw gegevens:",
     privacyColection:
       "Verzameling: Alleen gegevens die vrijwillig in het formulier zijn ingevoerd, worden verwerkt.",
     privacyUsage:
@@ -858,7 +858,7 @@ const translations = {
 
     privacyTitle: "Politik prevezded",
     privacyContent:
-      "Collecte : Ne vez traitet nemet an titouroù lakaet gant ar user er form.",
+      "In overeenstemming met de AVG, hier is de informatie over uw gegevens:",
     privacyColection:
       "Collecte : Ne vez traitet nemet an titouroù lakaet gant ar user er form.",
     privacyUsage:
