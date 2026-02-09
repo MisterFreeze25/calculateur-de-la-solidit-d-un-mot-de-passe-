@@ -939,3 +939,16 @@ audio::-webkit-media-controls-panel {
 .text-muted {
   color: rgb(85, 85, 85);
 }
+
+h2 {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 22px;
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  animation: titlePulse 0.8s ease-out;
+  text-shadow: 0 0 20px rgba(102, 126, 234, 0.2);
+}
