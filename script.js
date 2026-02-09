@@ -449,23 +449,36 @@ const translations = {
     backToHome: "Retour à l'accueil",
 
     passwordTitle: "Comment choisir un bon mot de passe",
-    passwordIntro: "Un mot de passe est la clé qui protège vos comptes en ligne (messagerie, réseaux sociaux, services bancaires, etc.). Il est essentiel qu'il soit solide, unique et difficile à deviner pour éviter toute compromission.",
+    passwordIntro:
+      "Un mot de passe est la clé qui protège vos comptes en ligne (messagerie, réseaux sociaux, services bancaires, etc.). Il est essentiel qu'il soit solide, unique et difficile à deviner pour éviter toute compromission.",
     passwordGoodPracticesTitle: "Bonnes pratiques générales",
-    passwordDifferent: "Utiliser un mot de passe différent pour chaque compte : ne réutilisez jamais le même mot de passe sur plusieurs services. Si un service est piraté, tous vos autres comptes pourraient l'être aussi.",
-    passwordRobust: "Choisir un mot de passe robuste : il doit contenir au minimum 12 caractères et combiner des lettres majuscules, minuscules, des chiffres et des caractères spéciaux.",
-    passwordAvoidPersonal: "Éviter les informations personnelles : dates de naissance, prénoms, noms d'animaux ou toute information facilement devinable.",
-    passwordChange: "Changer le mot de passe en cas de doute : toute activité suspecte ou fuite de données doit entraîner un changement immédiat.",
-    passwordKeepSecret: "Garder ses mots de passe secrets : aucune organisation sérieuse ne demande un mot de passe par e-mail ou par téléphone.",
-    passwordSharedComputer: "Éviter les ordinateurs partagés : ne pas enregistrer ses mots de passe sur des appareils publics ou partagés.",
-    passwordDefault: "Changer les mots de passe par défaut : les mots de passe fournis à l'installation sont souvent connus des cybercriminels.",
+    passwordDifferent:
+      "Utiliser un mot de passe différent pour chaque compte : ne réutilisez jamais le même mot de passe sur plusieurs services. Si un service est piraté, tous vos autres comptes pourraient l'être aussi.",
+    passwordRobust:
+      "Choisir un mot de passe robuste : il doit contenir au minimum 12 caractères et combiner des lettres majuscules, minuscules, des chiffres et des caractères spéciaux.",
+    passwordAvoidPersonal:
+      "Éviter les informations personnelles : dates de naissance, prénoms, noms d'animaux ou toute information facilement devinable.",
+    passwordChange:
+      "Changer le mot de passe en cas de doute : toute activité suspecte ou fuite de données doit entraîner un changement immédiat.",
+    passwordKeepSecret:
+      "Garder ses mots de passe secrets : aucune organisation sérieuse ne demande un mot de passe par e-mail ou par téléphone.",
+    passwordSharedComputer:
+      "Éviter les ordinateurs partagés : ne pas enregistrer ses mots de passe sur des appareils publics ou partagés.",
+    passwordDefault:
+      "Changer les mots de passe par défaut : les mots de passe fournis à l'installation sont souvent connus des cybercriminels.",
     passwordCreationTitle: "Créer un mot de passe sécurisé",
-    passwordCreateSelf: "Créer soi-même son mot de passe en utilisant une phrase facile à retenir mais difficile à deviner.",
-    passwordUseGenerator: "Utiliser un générateur de mots de passe pour créer automatiquement des mots de passe complexes et sécurisés.",
+    passwordCreateSelf:
+      "Créer soi-même son mot de passe en utilisant une phrase facile à retenir mais difficile à deviner.",
+    passwordUseGenerator:
+      "Utiliser un générateur de mots de passe pour créer automatiquement des mots de passe complexes et sécurisés.",
     passwordManagersTitle: "Gestionnaire de mots de passe",
-    passwordManager: "Un gestionnaire de mots de passe permet de stocker et gérer l'ensemble de ses identifiants de manière sécurisée.",
+    passwordManager:
+      "Un gestionnaire de mots de passe permet de stocker et gérer l'ensemble de ses identifiants de manière sécurisée.",
     passwordAdvancedTitle: "Sécurité renforcée",
-    password2FA: "Activer l'authentification à double facteur pour ajouter une couche de sécurité supplémentaire.",
-    passwordTestStrength: "Vérifier régulièrement la solidité de ses mots de passe à l'aide d'outils adaptés.",
+    password2FA:
+      "Activer l'authentification à double facteur pour ajouter une couche de sécurité supplémentaire.",
+    passwordTestStrength:
+      "Vérifier régulièrement la solidité de ses mots de passe à l'aide d'outils adaptés.",
   },
   en: {
     title: "Password Strength Calculator",
@@ -527,23 +540,36 @@ const translations = {
     backToHome: "Back to home",
 
     passwordTitle: "How to Choose a Good Password",
-    passwordIntro: "A password is the key that protects your online accounts (email, social networks, banking services, etc.). It is essential that it be strong, unique and difficult to guess to avoid any compromise.",
+    passwordIntro:
+      "A password is the key that protects your online accounts (email, social networks, banking services, etc.). It is essential that it be strong, unique and difficult to guess to avoid any compromise.",
     passwordGoodPracticesTitle: "General Best Practices",
-    passwordDifferent: "Use a different password for each account: never reuse the same password across multiple services. If one service is hacked, all your other accounts could be compromised too.",
-    passwordRobust: "Choose a strong password: it must contain at least 12 characters and combine uppercase letters, lowercase letters, numbers and special characters.",
-    passwordAvoidPersonal: "Avoid personal information: birthdates, first names, pet names or any easily guessable information.",
-    passwordChange: "Change your password in case of doubt: any suspicious activity or data breach should result in an immediate change.",
-    passwordKeepSecret: "Keep your passwords secret: no legitimate organization asks for a password by email or phone.",
-    passwordSharedComputer: "Avoid shared computers: do not save your passwords on public or shared devices.",
-    passwordDefault: "Change default passwords: passwords provided at installation are often known to cybercriminals.",
+    passwordDifferent:
+      "Use a different password for each account: never reuse the same password across multiple services. If one service is hacked, all your other accounts could be compromised too.",
+    passwordRobust:
+      "Choose a strong password: it must contain at least 12 characters and combine uppercase letters, lowercase letters, numbers and special characters.",
+    passwordAvoidPersonal:
+      "Avoid personal information: birthdates, first names, pet names or any easily guessable information.",
+    passwordChange:
+      "Change your password in case of doubt: any suspicious activity or data breach should result in an immediate change.",
+    passwordKeepSecret:
+      "Keep your passwords secret: no legitimate organization asks for a password by email or phone.",
+    passwordSharedComputer:
+      "Avoid shared computers: do not save your passwords on public or shared devices.",
+    passwordDefault:
+      "Change default passwords: passwords provided at installation are often known to cybercriminals.",
     passwordCreationTitle: "Create a Secure Password",
-    passwordCreateSelf: "Create your own password using a phrase that is easy to remember but difficult to guess.",
-    passwordUseGenerator: "Use a password generator to automatically create complex and secure passwords.",
+    passwordCreateSelf:
+      "Create your own password using a phrase that is easy to remember but difficult to guess.",
+    passwordUseGenerator:
+      "Use a password generator to automatically create complex and secure passwords.",
     passwordManagersTitle: "Password Manager",
-    passwordManager: "A password manager allows you to store and manage all your credentials securely.",
+    passwordManager:
+      "A password manager allows you to store and manage all your credentials securely.",
     passwordAdvancedTitle: "Enhanced Security",
-    password2FA: "Enable two-factor authentication to add an extra layer of security.",
-    passwordTestStrength: "Regularly check the strength of your passwords using appropriate tools.",
+    password2FA:
+      "Enable two-factor authentication to add an extra layer of security.",
+    passwordTestStrength:
+      "Regularly check the strength of your passwords using appropriate tools.",
   },
   de: {
     title: "Passwortstärke-Rechner",
@@ -607,23 +633,36 @@ const translations = {
     backToHome: "Zurück zur Startseite",
 
     passwordTitle: "Wie wählt man ein gutes Passwort",
-    passwordIntro: "Ein Passwort ist der Schlüssel, der Ihre Online-Konten (E-Mail, soziale Netzwerke, Bankdienste usw.) schützt. Es ist wichtig, dass es stark, einzigartig und schwer zu erraten ist, um jede Kompromittierung zu vermeiden.",
+    passwordIntro:
+      "Ein Passwort ist der Schlüssel, der Ihre Online-Konten (E-Mail, soziale Netzwerke, Bankdienste usw.) schützt. Es ist wichtig, dass es stark, einzigartig und schwer zu erraten ist, um jede Kompromittierung zu vermeiden.",
     passwordGoodPracticesTitle: "Allgemeine bewährte Praktiken",
-    passwordDifferent: "Verwenden Sie für jedes Konto ein anderes Passwort: Verwenden Sie niemals dasselbe Passwort für mehrere Dienste. Wenn ein Dienst gehackt wird, könnten alle Ihre anderen Konten ebenfalls kompromittiert werden.",
-    passwordRobust: "Wählen Sie ein starkes Passwort: Es muss mindestens 12 Zeichen enthalten und Großbuchstaben, Kleinbuchstaben, Zahlen und Sonderzeichen kombinieren.",
-    passwordAvoidPersonal: "Vermeiden Sie persönliche Informationen: Geburtsdaten, Vornamen, Haustiernamen oder andere leicht zu erratende Informationen.",
-    passwordChange: "Ändern Sie das Passwort im Zweifelsfall: Jede verdächtige Aktivität oder jeder Datenleck sollte zu einer sofortigen Änderung führen.",
-    passwordKeepSecret: "Halten Sie Ihre Passwörter geheim: Keine seriöse Organisation fragt per E-Mail oder Telefon nach einem Passwort.",
-    passwordSharedComputer: "Vermeiden Sie gemeinsam genutzte Computer: Speichern Sie Ihre Passwörter nicht auf öffentlichen oder gemeinsam genutzten Geräten.",
-    passwordDefault: "Ändern Sie Standardpasswörter: Bei der Installation bereitgestellte Passwörter sind Cyberkriminellen oft bekannt.",
+    passwordDifferent:
+      "Verwenden Sie für jedes Konto ein anderes Passwort: Verwenden Sie niemals dasselbe Passwort für mehrere Dienste. Wenn ein Dienst gehackt wird, könnten alle Ihre anderen Konten ebenfalls kompromittiert werden.",
+    passwordRobust:
+      "Wählen Sie ein starkes Passwort: Es muss mindestens 12 Zeichen enthalten und Großbuchstaben, Kleinbuchstaben, Zahlen und Sonderzeichen kombinieren.",
+    passwordAvoidPersonal:
+      "Vermeiden Sie persönliche Informationen: Geburtsdaten, Vornamen, Haustiernamen oder andere leicht zu erratende Informationen.",
+    passwordChange:
+      "Ändern Sie das Passwort im Zweifelsfall: Jede verdächtige Aktivität oder jeder Datenleck sollte zu einer sofortigen Änderung führen.",
+    passwordKeepSecret:
+      "Halten Sie Ihre Passwörter geheim: Keine seriöse Organisation fragt per E-Mail oder Telefon nach einem Passwort.",
+    passwordSharedComputer:
+      "Vermeiden Sie gemeinsam genutzte Computer: Speichern Sie Ihre Passwörter nicht auf öffentlichen oder gemeinsam genutzten Geräten.",
+    passwordDefault:
+      "Ändern Sie Standardpasswörter: Bei der Installation bereitgestellte Passwörter sind Cyberkriminellen oft bekannt.",
     passwordCreationTitle: "Ein sicheres Passwort erstellen",
-    passwordCreateSelf: "Erstellen Sie Ihr eigenes Passwort mit einem Satz, der leicht zu merken, aber schwer zu erraten ist.",
-    passwordUseGenerator: "Verwenden Sie einen Passwortgenerator, um automatisch komplexe und sichere Passwörter zu erstellen.",
+    passwordCreateSelf:
+      "Erstellen Sie Ihr eigenes Passwort mit einem Satz, der leicht zu merken, aber schwer zu erraten ist.",
+    passwordUseGenerator:
+      "Verwenden Sie einen Passwortgenerator, um automatisch komplexe und sichere Passwörter zu erstellen.",
     passwordManagersTitle: "Passwort-Manager",
-    passwordManager: "Ein Passwort-Manager ermöglicht es Ihnen, alle Ihre Anmeldedaten sicher zu speichern und zu verwalten.",
+    passwordManager:
+      "Ein Passwort-Manager ermöglicht es Ihnen, alle Ihre Anmeldedaten sicher zu speichern und zu verwalten.",
     passwordAdvancedTitle: "Erweiterte Sicherheit",
-    password2FA: "Aktivieren Sie die Zwei-Faktor-Authentifizierung, um eine zusätzliche Sicherheitsebene hinzuzufügen.",
-    passwordTestStrength: "Überprüfen Sie regelmäßig die Stärke Ihrer Passwörter mit geeigneten Tools.",
+    password2FA:
+      "Aktivieren Sie die Zwei-Faktor-Authentifizierung, um eine zusätzliche Sicherheitsebene hinzuzufügen.",
+    passwordTestStrength:
+      "Überprüfen Sie regelmäßig die Stärke Ihrer Passwörter mit geeigneten Tools.",
   },
   sp: {
     title: "Calculador de fuerza de contraseña",
@@ -686,23 +725,36 @@ const translations = {
     backToHome: "Volver al inicio",
 
     passwordTitle: "Cómo elegir una buena contraseña",
-    passwordIntro: "Una contraseña es la clave que protege sus cuentas en línea (correo electrónico, redes sociales, servicios bancarios, etc.). Es esencial que sea sólida, única y difícil de adivinar para evitar cualquier compromiso.",
+    passwordIntro:
+      "Una contraseña es la clave que protege sus cuentas en línea (correo electrónico, redes sociales, servicios bancarios, etc.). Es esencial que sea sólida, única y difícil de adivinar para evitar cualquier compromiso.",
     passwordGoodPracticesTitle: "Buenas prácticas generales",
-    passwordDifferent: "Usar una contraseña diferente para cada cuenta: nunca reutilice la misma contraseña en varios servicios. Si un servicio es pirateado, todas sus otras cuentas también podrían estarlo.",
-    passwordRobust: "Elegir una contraseña robusta: debe contener al menos 12 caracteres y combinar letras mayúsculas, minúsculas, números y caracteres especiales.",
-    passwordAvoidPersonal: "Evitar información personal: fechas de nacimiento, nombres, nombres de mascotas o cualquier información fácilmente adivinable.",
-    passwordChange: "Cambiar la contraseña en caso de duda: cualquier actividad sospechosa o filtración de datos debe resultar en un cambio inmediato.",
-    passwordKeepSecret: "Mantener sus contraseñas en secreto: ninguna organización seria solicita una contraseña por correo electrónico o teléfono.",
-    passwordSharedComputer: "Evitar computadoras compartidas: no guarde sus contraseñas en dispositivos públicos o compartidos.",
-    passwordDefault: "Cambiar las contraseñas predeterminadas: las contraseñas proporcionadas en la instalación suelen ser conocidas por los cibercriminales.",
+    passwordDifferent:
+      "Usar una contraseña diferente para cada cuenta: nunca reutilice la misma contraseña en varios servicios. Si un servicio es pirateado, todas sus otras cuentas también podrían estarlo.",
+    passwordRobust:
+      "Elegir una contraseña robusta: debe contener al menos 12 caracteres y combinar letras mayúsculas, minúsculas, números y caracteres especiales.",
+    passwordAvoidPersonal:
+      "Evitar información personal: fechas de nacimiento, nombres, nombres de mascotas o cualquier información fácilmente adivinable.",
+    passwordChange:
+      "Cambiar la contraseña en caso de duda: cualquier actividad sospechosa o filtración de datos debe resultar en un cambio inmediato.",
+    passwordKeepSecret:
+      "Mantener sus contraseñas en secreto: ninguna organización seria solicita una contraseña por correo electrónico o teléfono.",
+    passwordSharedComputer:
+      "Evitar computadoras compartidas: no guarde sus contraseñas en dispositivos públicos o compartidos.",
+    passwordDefault:
+      "Cambiar las contraseñas predeterminadas: las contraseñas proporcionadas en la instalación suelen ser conocidas por los cibercriminales.",
     passwordCreationTitle: "Crear una contraseña segura",
-    passwordCreateSelf: "Cree su propia contraseña usando una frase fácil de recordar pero difícil de adivinar.",
-    passwordUseGenerator: "Use un generador de contraseñas para crear automáticamente contraseñas complejas y seguras.",
+    passwordCreateSelf:
+      "Cree su propia contraseña usando una frase fácil de recordar pero difícil de adivinar.",
+    passwordUseGenerator:
+      "Use un generador de contraseñas para crear automáticamente contraseñas complejas y seguras.",
     passwordManagersTitle: "Gestor de contraseñas",
-    passwordManager: "Un gestor de contraseñas permite almacenar y gestionar todos sus credenciales de forma segura.",
+    passwordManager:
+      "Un gestor de contraseñas permite almacenar y gestionar todos sus credenciales de forma segura.",
     passwordAdvancedTitle: "Seguridad reforzada",
-    password2FA: "Active la autenticación de dos factores para agregar una capa adicional de seguridad.",
-    passwordTestStrength: "Verifique regularmente la solidez de sus contraseñas con herramientas adecuadas.",
+    password2FA:
+      "Active la autenticación de dos factores para agregar una capa adicional de seguridad.",
+    passwordTestStrength:
+      "Verifique regularmente la solidez de sus contraseñas con herramientas adecuadas.",
   },
   it: {
     title: "Calcolatore della forza della password",
@@ -765,23 +817,36 @@ const translations = {
     backToHome: "Torna alla home",
 
     passwordTitle: "Come scegliere una buona password",
-    passwordIntro: "Una password è la chiave che protegge i tuoi account online (posta elettronica, social network, servizi bancari, ecc.). È essenziale che sia solida, unica e difficile da indovinare per evitare qualsiasi compromissione.",
+    passwordIntro:
+      "Una password è la chiave che protegge i tuoi account online (posta elettronica, social network, servizi bancari, ecc.). È essenziale che sia solida, unica e difficile da indovinare per evitare qualsiasi compromissione.",
     passwordGoodPracticesTitle: "Buone pratiche generali",
-    passwordDifferent: "Utilizzare una password diversa per ogni account: non riutilizzare mai la stessa password su più servizi. Se un servizio viene violato, anche tutti gli altri tuoi account potrebbero esserlo.",
-    passwordRobust: "Scegliere una password robusta: deve contenere almeno 12 caratteri e combinare lettere maiuscole, minuscole, numeri e caratteri speciali.",
-    passwordAvoidPersonal: "Evitare informazioni personali: date di nascita, nomi, nomi di animali domestici o qualsiasi informazione facilmente indovinabile.",
-    passwordChange: "Cambiare la password in caso di dubbio: qualsiasi attività sospetta o fuga di dati deve comportare un cambio immediato.",
-    passwordKeepSecret: "Mantenere segrete le proprie password: nessuna organizzazione seria richiede una password via e-mail o telefono.",
-    passwordSharedComputer: "Evitare computer condivisi: non salvare le password su dispositivi pubblici o condivisi.",
-    passwordDefault: "Cambiare le password predefinite: le password fornite all'installazione sono spesso note ai criminali informatici.",
+    passwordDifferent:
+      "Utilizzare una password diversa per ogni account: non riutilizzare mai la stessa password su più servizi. Se un servizio viene violato, anche tutti gli altri tuoi account potrebbero esserlo.",
+    passwordRobust:
+      "Scegliere una password robusta: deve contenere almeno 12 caratteri e combinare lettere maiuscole, minuscole, numeri e caratteri speciali.",
+    passwordAvoidPersonal:
+      "Evitare informazioni personali: date di nascita, nomi, nomi di animali domestici o qualsiasi informazione facilmente indovinabile.",
+    passwordChange:
+      "Cambiare la password in caso di dubbio: qualsiasi attività sospetta o fuga di dati deve comportare un cambio immediato.",
+    passwordKeepSecret:
+      "Mantenere segrete le proprie password: nessuna organizzazione seria richiede una password via e-mail o telefono.",
+    passwordSharedComputer:
+      "Evitare computer condivisi: non salvare le password su dispositivi pubblici o condivisi.",
+    passwordDefault:
+      "Cambiare le password predefinite: le password fornite all'installazione sono spesso note ai criminali informatici.",
     passwordCreationTitle: "Creare una password sicura",
-    passwordCreateSelf: "Crea la tua password utilizzando una frase facile da ricordare ma difficile da indovinare.",
-    passwordUseGenerator: "Utilizzare un generatore di password per creare automaticamente password complesse e sicure.",
+    passwordCreateSelf:
+      "Crea la tua password utilizzando una frase facile da ricordare ma difficile da indovinare.",
+    passwordUseGenerator:
+      "Utilizzare un generatore di password per creare automaticamente password complesse e sicure.",
     passwordManagersTitle: "Gestore di password",
-    passwordManager: "Un gestore di password permette di memorizzare e gestire tutte le proprie credenziali in modo sicuro.",
+    passwordManager:
+      "Un gestore di password permette di memorizzare e gestire tutte le proprie credenziali in modo sicuro.",
     passwordAdvancedTitle: "Sicurezza rafforzata",
-    password2FA: "Attivare l'autenticazione a due fattori per aggiungere un ulteriore livello di sicurezza.",
-    passwordTestStrength: "Verificare regolarmente la solidità delle proprie password con strumenti appropriati.",
+    password2FA:
+      "Attivare l'autenticazione a due fattori per aggiungere un ulteriore livello di sicurezza.",
+    passwordTestStrength:
+      "Verificare regolarmente la solidità delle proprie password con strumenti appropriati.",
   },
   pt: {
     title: "Calculadora de força de senha",
@@ -844,23 +909,36 @@ const translations = {
     backToHome: "Voltar para o início",
 
     passwordTitle: "Como escolher uma boa senha",
-    passwordIntro: "Uma senha é a chave que protege suas contas online (e-mail, redes sociais, serviços bancários, etc.). É essencial que seja forte, única e difícil de adivinhar para evitar qualquer comprometimento.",
+    passwordIntro:
+      "Uma senha é a chave que protege suas contas online (e-mail, redes sociais, serviços bancários, etc.). É essencial que seja forte, única e difícil de adivinhar para evitar qualquer comprometimento.",
     passwordGoodPracticesTitle: "Boas práticas gerais",
-    passwordDifferent: "Usar uma senha diferente para cada conta: nunca reutilize a mesma senha em vários serviços. Se um serviço for hackeado, todas as suas outras contas também poderão ser.",
-    passwordRobust: "Escolher uma senha robusta: deve conter no mínimo 12 caracteres e combinar letras maiúsculas, minúsculas, números e caracteres especiais.",
-    passwordAvoidPersonal: "Evitar informações pessoais: datas de nascimento, nomes, nomes de animais de estimação ou qualquer informação facilmente adivinhável.",
-    passwordChange: "Mudar a senha em caso de dúvida: qualquer atividade suspeita ou vazamento de dados deve resultar em uma mudança imediata.",
-    passwordKeepSecret: "Manter suas senhas em segredo: nenhuma organização séria solicita uma senha por e-mail ou telefone.",
-    passwordSharedComputer: "Evitar computadores compartilhados: não salve suas senhas em dispositivos públicos ou compartilhados.",
-    passwordDefault: "Mudar as senhas padrão: as senhas fornecidas na instalação são frequentemente conhecidas pelos cibercriminosos.",
+    passwordDifferent:
+      "Usar uma senha diferente para cada conta: nunca reutilize a mesma senha em vários serviços. Se um serviço for hackeado, todas as suas outras contas também poderão ser.",
+    passwordRobust:
+      "Escolher uma senha robusta: deve conter no mínimo 12 caracteres e combinar letras maiúsculas, minúsculas, números e caracteres especiais.",
+    passwordAvoidPersonal:
+      "Evitar informações pessoais: datas de nascimento, nomes, nomes de animais de estimação ou qualquer informação facilmente adivinhável.",
+    passwordChange:
+      "Mudar a senha em caso de dúvida: qualquer atividade suspeita ou vazamento de dados deve resultar em uma mudança imediata.",
+    passwordKeepSecret:
+      "Manter suas senhas em segredo: nenhuma organização séria solicita uma senha por e-mail ou telefone.",
+    passwordSharedComputer:
+      "Evitar computadores compartilhados: não salve suas senhas em dispositivos públicos ou compartilhados.",
+    passwordDefault:
+      "Mudar as senhas padrão: as senhas fornecidas na instalação são frequentemente conhecidas pelos cibercriminosos.",
     passwordCreationTitle: "Criar uma senha segura",
-    passwordCreateSelf: "Crie sua própria senha usando uma frase fácil de lembrar, mas difícil de adivinhar.",
-    passwordUseGenerator: "Use um gerador de senhas para criar automaticamente senhas complexas e seguras.",
+    passwordCreateSelf:
+      "Crie sua própria senha usando uma frase fácil de lembrar, mas difícil de adivinhar.",
+    passwordUseGenerator:
+      "Use um gerador de senhas para criar automaticamente senhas complexas e seguras.",
     passwordManagersTitle: "Gerenciador de senhas",
-    passwordManager: "Um gerenciador de senhas permite armazenar e gerenciar todas as suas credenciais de forma segura.",
+    passwordManager:
+      "Um gerenciador de senhas permite armazenar e gerenciar todas as suas credenciais de forma segura.",
     passwordAdvancedTitle: "Segurança reforçada",
-    password2FA: "Ative a autenticação de dois fatores para adicionar uma camada extra de segurança.",
-    passwordTestStrength: "Verifique regularmente a força de suas senhas com ferramentas apropriadas.",
+    password2FA:
+      "Ative a autenticação de dois fatores para adicionar uma camada extra de segurança.",
+    passwordTestStrength:
+      "Verifique regularmente a força de suas senhas com ferramentas apropriadas.",
   },
   nl: {
     title: "Wachtwoordsterkte Calculator",
@@ -923,23 +1001,36 @@ const translations = {
     backToHome: "Terug naar home",
 
     passwordTitle: "Hoe kies je een goed wachtwoord",
-    passwordIntro: "Een wachtwoord is de sleutel die je online accounts beschermt (e-mail, sociale netwerken, bankdiensten, enz.). Het is essentieel dat het sterk, uniek en moeilijk te raden is om compromittering te voorkomen.",
+    passwordIntro:
+      "Een wachtwoord is de sleutel die je online accounts beschermt (e-mail, sociale netwerken, bankdiensten, enz.). Het is essentieel dat het sterk, uniek en moeilijk te raden is om compromittering te voorkomen.",
     passwordGoodPracticesTitle: "Algemene beste praktijken",
-    passwordDifferent: "Gebruik een ander wachtwoord voor elk account: hergebruik nooit hetzelfde wachtwoord voor meerdere diensten. Als één dienst gehackt wordt, kunnen al je andere accounts ook gecompromitteerd worden.",
-    passwordRobust: "Kies een robuust wachtwoord: het moet minimaal 12 tekens bevatten en hoofdletters, kleine letters, cijfers en speciale tekens combineren.",
-    passwordAvoidPersonal: "Vermijd persoonlijke informatie: geboortedata, voornamen, namen van huisdieren of andere gemakkelijk te raden informatie.",
-    passwordChange: "Verander je wachtwoord bij twijfel: elke verdachte activiteit of datalek moet leiden tot een onmiddellijke wijziging.",
-    passwordKeepSecret: "Houd je wachtwoorden geheim: geen serieuze organisatie vraagt om een wachtwoord per e-mail of telefoon.",
-    passwordSharedComputer: "Vermijd gedeelde computers: bewaar je wachtwoorden niet op openbare of gedeelde apparaten.",
-    passwordDefault: "Verander standaardwachtwoorden: wachtwoorden die bij installatie worden verstrekt, zijn vaak bekend bij cybercriminelen.",
+    passwordDifferent:
+      "Gebruik een ander wachtwoord voor elk account: hergebruik nooit hetzelfde wachtwoord voor meerdere diensten. Als één dienst gehackt wordt, kunnen al je andere accounts ook gecompromitteerd worden.",
+    passwordRobust:
+      "Kies een robuust wachtwoord: het moet minimaal 12 tekens bevatten en hoofdletters, kleine letters, cijfers en speciale tekens combineren.",
+    passwordAvoidPersonal:
+      "Vermijd persoonlijke informatie: geboortedata, voornamen, namen van huisdieren of andere gemakkelijk te raden informatie.",
+    passwordChange:
+      "Verander je wachtwoord bij twijfel: elke verdachte activiteit of datalek moet leiden tot een onmiddellijke wijziging.",
+    passwordKeepSecret:
+      "Houd je wachtwoorden geheim: geen serieuze organisatie vraagt om een wachtwoord per e-mail of telefoon.",
+    passwordSharedComputer:
+      "Vermijd gedeelde computers: bewaar je wachtwoorden niet op openbare of gedeelde apparaten.",
+    passwordDefault:
+      "Verander standaardwachtwoorden: wachtwoorden die bij installatie worden verstrekt, zijn vaak bekend bij cybercriminelen.",
     passwordCreationTitle: "Maak een veilig wachtwoord",
-    passwordCreateSelf: "Maak je eigen wachtwoord met een zin die gemakkelijk te onthouden maar moeilijk te raden is.",
-    passwordUseGenerator: "Gebruik een wachtwoordgenerator om automatisch complexe en veilige wachtwoorden te maken.",
+    passwordCreateSelf:
+      "Maak je eigen wachtwoord met een zin die gemakkelijk te onthouden maar moeilijk te raden is.",
+    passwordUseGenerator:
+      "Gebruik een wachtwoordgenerator om automatisch complexe en veilige wachtwoorden te maken.",
     passwordManagersTitle: "Wachtwoordbeheerder",
-    passwordManager: "Een wachtwoordbeheerder stelt je in staat om al je inloggegevens veilig op te slaan en te beheren.",
+    passwordManager:
+      "Een wachtwoordbeheerder stelt je in staat om al je inloggegevens veilig op te slaan en te beheren.",
     passwordAdvancedTitle: "Versterkte beveiliging",
-    password2FA: "Activeer twee-factor-authenticatie om een extra beveiligingslaag toe te voegen.",
-    passwordTestStrength: "Controleer regelmatig de sterkte van je wachtwoorden met geschikte tools.",
+    password2FA:
+      "Activeer twee-factor-authenticatie om een extra beveiligingslaag toe te voegen.",
+    passwordTestStrength:
+      "Controleer regelmatig de sterkte van je wachtwoorden met geschikte tools.",
   },
   br: {
     title: "Kalkulator krederion ar geriadur",
@@ -1002,23 +1093,36 @@ const translations = {
     backToHome: "Distrei da home",
 
     passwordTitle: "Penaos dibab ur ger-tremen mat",
-    passwordIntro: "Ur ger-tremen eo an alc'hwez a c'harez ho kontoù enlinenn (postel, rouedadoù sokial, servijoù bank, hag all). Pouezus eo e vefe kreñv, nemetken hag diaes da zonjal evit mirout ouzh fazi ebet.",
+    passwordIntro:
+      "Ur ger-tremen eo an alc'hwez a c'harez ho kontoù enlinenn (postel, rouedadoù sokial, servijoù bank, hag all). Pouezus eo e vefe kreñv, nemetken hag diaes da zonjal evit mirout ouzh fazi ebet.",
     passwordGoodPracticesTitle: "Arferioù mat hollek",
-    passwordDifferent: "Implijout ur ger-tremen disheñvel evit pep kont: na implijit morse ar ger-tremen heñvel evit meur a servij. Ma vez hacked ur servij, ho kontoù all a c'hellfe bezañ ivez.",
-    passwordRobust: "Dibab ur ger-tremen kreñv: ret eo dezhañ enderc'hel 12 arouezenn d'an nebeutañ ha kemmeskañ lizherennoù bras, lizherennoù bihan, sifroù hag arouezennoù ispisial.",
-    passwordAvoidPersonal: "Chom hep stlennoù personel: deiziadoù ganedigezh, anvioù-bihan, anvioù loenoù pe pep stlenn aes da zonjal.",
-    passwordChange: "Cheñch ar ger-tremen ma'z eus mar: pep obererezh doutus pe divulgadur roadennoù a rank kas da ur cheñchamant diouzhtu.",
-    passwordKeepSecret: "Mirout ho kerioù-tremen en-kuzh: n'eus aozadur ebet a c'houlenn ur ger-tremen dre bostel pe dre bellgomz.",
-    passwordSharedComputer: "Chom hep urzhiataerioù rannet: na enrollit ket ho kerioù-tremen war benvegadoù foran pe rannet.",
-    passwordDefault: "Cheñch ar gerioù-tremen dre ziouer: ar gerioù-tremen pourchaset gant ar staliadur a vez anavezet gant ar priñs-kennañ.",
+    passwordDifferent:
+      "Implijout ur ger-tremen disheñvel evit pep kont: na implijit morse ar ger-tremen heñvel evit meur a servij. Ma vez hacked ur servij, ho kontoù all a c'hellfe bezañ ivez.",
+    passwordRobust:
+      "Dibab ur ger-tremen kreñv: ret eo dezhañ enderc'hel 12 arouezenn d'an nebeutañ ha kemmeskañ lizherennoù bras, lizherennoù bihan, sifroù hag arouezennoù ispisial.",
+    passwordAvoidPersonal:
+      "Chom hep stlennoù personel: deiziadoù ganedigezh, anvioù-bihan, anvioù loenoù pe pep stlenn aes da zonjal.",
+    passwordChange:
+      "Cheñch ar ger-tremen ma'z eus mar: pep obererezh doutus pe divulgadur roadennoù a rank kas da ur cheñchamant diouzhtu.",
+    passwordKeepSecret:
+      "Mirout ho kerioù-tremen en-kuzh: n'eus aozadur ebet a c'houlenn ur ger-tremen dre bostel pe dre bellgomz.",
+    passwordSharedComputer:
+      "Chom hep urzhiataerioù rannet: na enrollit ket ho kerioù-tremen war benvegadoù foran pe rannet.",
+    passwordDefault:
+      "Cheñch ar gerioù-tremen dre ziouer: ar gerioù-tremen pourchaset gant ar staliadur a vez anavezet gant ar priñs-kennañ.",
     passwordCreationTitle: "Krouiñ ur ger-tremen suraet",
-    passwordCreateSelf: "Krouit hoc'h ger-tremen oc'h-unan en ur implijout ur frazenn aes da zerc'hel soñj anezhi met diaes da zonjal.",
-    passwordUseGenerator: "Implijout ur c'henluner gerioù-tremen evit krouiñ ent emgefre gerioù-tremes kemplesk ha suraet.",
+    passwordCreateSelf:
+      "Krouit hoc'h ger-tremen oc'h-unan en ur implijout ur frazenn aes da zerc'hel soñj anezhi met diaes da zonjal.",
+    passwordUseGenerator:
+      "Implijout ur c'henluner gerioù-tremen evit krouiñ ent emgefre gerioù-tremes kemplesk ha suraet.",
     passwordManagersTitle: "Merour gerioù-tremes",
-    passwordManager: "Ur merour gerioù-tremes a ro tu da enrollañ ha da verañ an holl anaouderioù en un doare suraet.",
+    passwordManager:
+      "Ur merour gerioù-tremes a ro tu da enrollañ ha da verañ an holl anaouderioù en un doare suraet.",
     passwordAdvancedTitle: "Surentez kreñvaet",
-    password2FA: "Gweredekaat an dilesadur daou-doare evit ouzhpennañ ur gwiskad surentez ouzhpenn.",
-    passwordTestStrength: "Gwiriañ alies kreñvder ho kerioù-tremes gant ostilhoù azas.",
+    password2FA:
+      "Gweredekaat an dilesadur daou-doare evit ouzhpennañ ur gwiskad surentez ouzhpenn.",
+    passwordTestStrength:
+      "Gwiriañ alies kreñvder ho kerioù-tremes gant ostilhoù azas.",
   },
 };
 
