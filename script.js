@@ -400,6 +400,7 @@ const translations = {
     github: "Mon GitHub",
     legalNotice: "Mentions légales",
     privacyPolicy: "Politique de confidentialité",
+    aboutCredits: "À propos & crédits",
     strengthLabel: "Solidité",
     strengths: {
       veryStrong: "Très fort",
@@ -492,6 +493,7 @@ const translations = {
     github: "My GitHub",
     legalNotice: "Legal Notice",
     privacyPolicy: "Privacy Policy",
+    aboutCredits: "About & Credits",
     strengthLabel: "Strength",
     strengths: {
       veryStrong: "Very Strong",
@@ -583,6 +585,7 @@ const translations = {
     github: "Mein GitHub",
     legalNotice: "Rechtlicher Hinweis",
     privacyPolicy: "Datenschutz-Bestimmungen",
+    aboutCredits: "Über & Credits",
     strengthLabel: "Stärke",
     strengths: {
       veryStrong: "Sehr stark",
@@ -676,6 +679,7 @@ const translations = {
     github: "Mi GitHub",
     legalNotice: "Aviso legal",
     privacyPolicy: "Política de privacidad",
+    aboutCredits: "Acerca de & Créditos",
     strengthLabel: "Fuerza",
     strengths: {
       veryStrong: "Muy fuerte",
@@ -768,6 +772,7 @@ const translations = {
     github: "Il mio GitHub",
     legalNotice: "Avviso legale",
     privacyPolicy: "Politica sulla privacy",
+    aboutCredits: "Informazioni & Crediti",
     strengthLabel: "Forza",
     strengths: {
       veryStrong: "Molto forte",
@@ -860,6 +865,7 @@ const translations = {
     github: "Meu GitHub",
     legalNotice: "Aviso legal",
     privacyPolicy: "Política de privacidade",
+    aboutCredits: "Sobre & Créditos",
     strengthLabel: "Força",
     strengths: {
       veryStrong: "Muito forte",
@@ -952,6 +958,7 @@ const translations = {
     github: "Mijn GitHub",
     legalNotice: "Juridische kennisgeving",
     privacyPolicy: "Privacybeleid",
+    aboutCredits: "Over & Credits",
     strengthLabel: "Sterkte",
     strengths: {
       veryStrong: "Zeer sterk",
@@ -1044,6 +1051,7 @@ const translations = {
     github: "Ma GitHub",
     legalNotice: "Notenn reizh",
     privacyPolicy: "Politik prevezded",
+    aboutCredits: "Diwar-benn & Kredioù",
     strengthLabel: "Krederion",
     strengths: {
       veryStrong: "Krederion mat-tre",
