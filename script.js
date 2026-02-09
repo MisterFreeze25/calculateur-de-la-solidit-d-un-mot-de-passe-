@@ -439,7 +439,7 @@ const translations = {
     privacyTitle: "Politique de confidentialité",
     privacyContent:
       "Conformément au RGPD, voici les informations concernant vos données :",
-    privacyColection:
+    privacyCollection:
       "Collecte : Seules les données saisies volontairement dans le formulaire sont traitées.",
     privacyUsage:
       "Utilisation : Ces données servent uniquement à la démonstration technique du projet.",
@@ -499,7 +499,7 @@ const translations = {
     privacyTitle: "Privacy Policy",
     privacyContent:
       "In accordance with GDPR, here is the information regarding your data:",
-    privacyColection:
+    privacyCollection:
       "Collection: Only data voluntarily entered in the form is processed.",
     privacyUsage:
       "Usage: This data is only used for the technical demonstration of the project.",
@@ -559,7 +559,7 @@ const translations = {
     privacyTitle: "Datenschutz-Bestimmungen",
     privacyContent:
       "In Übereinstimmung mit der DSGVO, hier sind die Informationen zu Ihren Daten:",
-    privacyColection:
+    privacyCollection:
       "Sammlung: Es werden nur Daten verarbeitet, die freiwillig in das Formular eingegeben wurden.",
     privacyUsage:
       "Verwendung: Diese Daten dienen nur der technischen Demonstration des Projekts.",
@@ -619,7 +619,7 @@ const translations = {
     privacyTitle: "Política de privacidad",
     privacyContent:
       "De acuerdo con el RGPD, aquí está la información sobre sus datos:",
-    privacyColection:
+    privacyCollection:
       "Recopilación: Solo se procesan los datos ingresados voluntariamente en el formulario.",
     privacyUsage:
       "Uso: Estos datos solo se utilizan para la demostración técnica del proyecto.",
@@ -679,7 +679,7 @@ const translations = {
     privacyTitle: "Politica sulla privacy",
     privacyContent:
       "In conformità con il GDPR, ecco le informazioni riguardanti i tuoi dati:",
-    privacyColection:
+    privacyCollection:
       "Raccolta: Vengono elaborati solo i dati inseriti volontariamente nel modulo.",
     privacyUsage:
       "Uso: Questi dati sono utilizzati solo per la dimostrazione tecnica del progetto.",
@@ -739,7 +739,7 @@ const translations = {
     privacyTitle: "Política de privacidade",
     privacyContent:
       "Conforme o RGPD, aqui estão as informações sobre seus dados:",
-    privacyColection:
+    privacyCollection:
       "Coleta: Apenas os dados inseridos voluntariamente no formulário são processados.",
     privacyUsage:
       "Uso: Esses dados são usados apenas para a demonstração técnica do projeto.",
@@ -799,7 +799,7 @@ const translations = {
     privacyTitle: "Privacybeleid",
     privacyContent:
       "In overeenstemming met de AVG, hier is de informatie over uw gegevens:",
-    privacyColection:
+    privacyCollection:
       "Verzameling: Alleen gegevens die vrijwillig in het formulier zijn ingevoerd, worden verwerkt.",
     privacyUsage:
       "Gebruik: Deze gegevens worden alleen gebruikt voor de technische demonstratie van het project.",
@@ -859,8 +859,8 @@ const translations = {
     privacyTitle: "Politik prevezded",
     privacyContent:
       "In overeenstemming met de AVG, hier is de informatie over uw gegevens:",
-    privacyColection:
-      "Collecte : Ne vez traitet nemet an titouroù lakaet gant ar user er form.",
+    privacyCollection:
+      "Collecte : Nevez traitet nemet an titouroù lakaet gant ar user er form.",
     privacyUsage:
       "Usage : An titouroù-mañ a vez implijet hepken evit ar skouer teknik eus ar raktres.",
     privacyStorage:
