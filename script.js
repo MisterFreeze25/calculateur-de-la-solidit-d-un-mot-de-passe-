@@ -1,3 +1,5 @@
+let currentLanguage = localStorage.getItem("language") || "fr";
+
 document.addEventListener("DOMContentLoaded", () => {
   const passwordInput = document.getElementById("passwordInput");
   const checkButton = document.getElementById("checkButton");
@@ -101,8 +103,6 @@ document.addEventListener("DOMContentLoaded", () => {
       .sort(() => Math.random() - 0.5)
       .join("");
   }
-
-  let currentLanguage = localStorage.getItem("language") || "fr";
 
   // Fonction pour créer des particules au clic
   function createClickParticles(event) {
@@ -388,9 +388,48 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("orientationchange", () => {
     setTimeout(adjustForScreen, 200);
   });
+
+  // Gestion de la sélection de la langue et traduction
+  const languageSelect = document.getElementById("languageSelect");
+
+  function setLanguage(lang) {
+    currentLanguage = lang;
+
+    document.querySelectorAll("[data-i18n]").forEach((el) => {
+      const key = el.getAttribute("data-i18n");
+      if (translations[lang] && translations[lang][key]) {
+        el.textContent = translations[lang][key];
+      }
+    });
+
+    document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
+      const key = el.getAttribute("data-i18n-placeholder");
+      if (translations[lang] && translations[lang][key]) {
+        el.placeholder = translations[lang][key];
+      }
+    });
+
+    document.documentElement.lang = lang;
+    localStorage.setItem("language", lang);
+
+    if (passwordInput.value.trim()) {
+      updateStrengthDisplay(passwordInput.value.trim());
+    }
+
+    if (toggle) {
+      updateToggle();
+    }
+  }
+
+  const savedLanguage = localStorage.getItem("language") || "fr";
+  languageSelect.value = savedLanguage;
+  setLanguage(savedLanguage);
+
+  languageSelect.addEventListener("change", (e) => {
+    setLanguage(e.target.value);
+  });
 });
 
-// Gestion de la sélection de la langue et traduction
 const translations = {
   fr: {
     title: "Calculateur de la solidité d'un mot de passe",
