@@ -5,6 +5,29 @@
   box-sizing: border-box;
 }
 
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.skip-link:focus-visible {
+  position: static;
+  left: auto;
+  width: auto;
+  height: auto;
+  padding: 10px 14px;
+  background: #fff;
+  color: #000;
+  z-index: 100;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
 /* Classe pour masquer visuellement le texte tout en le gardant accessible aux lecteurs d'écran */
 .sr-only {
   position: absolute;
@@ -148,6 +171,22 @@ input[type="text"] {
   background: #f9fafb;
   animation: slideUp 0.5s ease-out 0.15s both;
   position: relative;
+}
+
+.actions-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.actions-row button {
+  width: auto;
+  flex: 1;
+  min-width: 0;
+}
+
+.security-title {
+  margin-top: 0;
 }
 
 @keyframes slideUp {

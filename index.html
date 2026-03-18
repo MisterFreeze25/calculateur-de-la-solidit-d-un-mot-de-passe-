@@ -9,6 +9,7 @@
   </head>
 
   <body>
+    <a class="skip-link" href="#passwordInput">Aller au mot de passe</a>
     <header class="mb" role="banner">
       <p class="logo">
         <img
@@ -27,9 +28,9 @@
         <option value="br">Breton</option>
       </select>
     </header>
-    <div class="container" role="main">
+    <main class="container">
       <h1 data-i18n="title">Calculateur de la solidité d'un mot de passe</h1>
-      <label for="passwordInput" data-i18n="passwordLabel">
+      <label id="passwordLabel" for="passwordInput" data-i18n="passwordLabel">
         Mot de passe :
       </label>
       <p id="passwordHelp" class="sr-only" data-i18n="passwordHelp">
@@ -83,20 +84,18 @@
           Générer un mot de passe
         </button>
       </div>
-      <div
-        id="results"
-        role="status"
-        aria-live="polite"
-        aria-atomic="true"
-      ></div>
-    </div>
+      <section id="resultsSection" aria-label="Résultat de la solidité" role="region" aria-live="polite" aria-atomic="true">
+        <h2 class="sr-only">Résultat</h2>
+        <div id="results"></div>
+      </section>
+    </main>
     <section
       class="security-dock"
       role="region"
       aria-label="Information de sécurité"
     >
       <div class="dock-container">
-        <h2 data-i18n="securityTitle" style="margin-top: 0">
+        <h2 data-i18n="securityTitle" class="security-title">
           Conseils de sécurité
         </h2>
         <p data-i18n="securityDescription">

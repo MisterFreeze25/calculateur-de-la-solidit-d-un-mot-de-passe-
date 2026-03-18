@@ -267,7 +267,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const originalCheckText = checkButton.textContent || "Vérifier";
 
     // vérification et bascule en mode "restart"
-    checkButton.addEventListener("click", () => {
+    checkButton.addEventListener("click", (event) => {
       createClickParticles(event);
       const mode = checkButton.dataset.mode || "check";
 
@@ -278,10 +278,13 @@ document.addEventListener("DOMContentLoaded", () => {
             translations[currentLanguage]?.emptyPassword ||
             "Veuillez entrer un mot de passe.";
           results.textContent = emptyText;
-          results.style.color = "red";
+          results.style.color = "#b00020";
           results.setAttribute("role", "alert");
+          passwordInput.setAttribute("aria-invalid", "true");
+          passwordInput.focus();
           return;
         }
+        passwordInput.setAttribute("aria-invalid", "false");
         // Affiche la solidité uniquement quand on clique sur "Vérifier"
         updateStrengthDisplay(password);
 
@@ -335,7 +338,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Gestion du bouton Générer un mot de passe
   const generateButton = document.getElementById("generateButton");
   if (generateButton && passwordInput) {
-    generateButton.addEventListener("click", () => {
+    generateButton.addEventListener("click", (event) => {
       const newPassword = generatePassword();
       passwordInput.value = newPassword;
       passwordInput.type = "text";
@@ -354,6 +357,7 @@ document.addEventListener("DOMContentLoaded", () => {
         results.removeAttribute("aria-label");
         results.removeAttribute("role");
       }
+      passwordInput.setAttribute("aria-invalid", "false");
       passwordInput.focus();
       createClickParticles(event);
     });
