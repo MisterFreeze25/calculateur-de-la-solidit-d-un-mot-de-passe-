@@ -137,6 +137,77 @@ document.addEventListener("DOMContentLoaded", () => {
     veryWeak: "#e74c3c",
   };
 
+  function getCharacterPoolSize(password) {
+    let pool = 0;
+    if (/[A-Z]/.test(password)) pool += 26;
+    if (/[a-z]/.test(password)) pool += 26;
+    if (/[0-9]/.test(password)) pool += 10;
+    if (/[^A-Za-z0-9]/.test(password)) pool += 33;
+    return Math.max(pool, 1);
+  }
+
+  function formatCrackDuration(totalSeconds) {
+    const units = [
+      { singular: "an", plural: "ans", seconds: 31557600 },
+      { singular: "mois", plural: "mois", seconds: 2592000 },
+      { singular: "jour", plural: "jours", seconds: 86400 },
+      { singular: "heure", plural: "heures", seconds: 3600 },
+      { singular: "minute", plural: "minutes", seconds: 60 },
+      { singular: "seconde", plural: "secondes", seconds: 1 },
+    ];
+
+    let remaining = totalSeconds;
+    const parts = [];
+
+    for (const unit of units) {
+      const value = Math.floor(remaining / unit.seconds);
+      if (value > 0 || parts.length > 0) {
+        const label = value <= 1 ? unit.singular : unit.plural;
+        parts.push(`${Number(value).toLocaleString("fr-FR")} ${label}`);
+        remaining -= value * unit.seconds;
+      }
+
+      if (parts.length >= 2) {
+        break;
+      }
+    }
+
+    if (parts.length === 0) {
+      return "moins d'une seconde";
+    }
+
+    return parts.join(", ").replace(/, 0 [^,]+$/, "");
+  }
+
+  function estimateCrackTime(password) {
+    const cleaned = (password || "").trim();
+    if (!cleaned) {
+      return "0 seconde";
+    }
+
+    const poolSize = getCharacterPoolSize(cleaned);
+    const entropyBits = cleaned.length * Math.log2(poolSize);
+    const guessesPerSecond = 1e8;
+
+    if (entropyBits > 90) {
+      return "plusieurs milliers d'années";
+    }
+    if (entropyBits > 70) {
+      return "plusieurs centaines d'années";
+    }
+
+    const totalSeconds = Math.pow(2, entropyBits) / guessesPerSecond;
+    if (!Number.isFinite(totalSeconds) || totalSeconds <= 0) {
+      return "moins d'une seconde";
+    }
+
+    if (totalSeconds > 31557600 * 1000) {
+      return "plusieurs milliers d'années";
+    }
+
+    return formatCrackDuration(totalSeconds);
+  }
+
   // Met à jour l'affichage de la solidité
   function updateStrengthDisplay(password) {
     if (!results) return;
@@ -154,11 +225,20 @@ document.addEventListener("DOMContentLoaded", () => {
       currentLanguage === "fr"
         ? "Solidité"
         : translations[currentLanguage]?.strengthLabel || "Strength";
+    const crackTimeLabel =
+      translations[currentLanguage]?.crackTimeLabel ||
+      "Temps estimé pour cracker :";
+    const attackNote =
+      translations[currentLanguage]?.attackNote ||
+      "Selon une attaque de force brute standard.";
+    const crackTime = estimateCrackTime(password);
     const improvementsLabel =
       translations[currentLanguage]?.feedback?.improvementsNeeded ||
       "Improvements needed:";
 
     let resultHTML = `<div style="font-weight: 600; margin-bottom: 12px; color: ${strengthColors[strengthKey]};">${strengthLabel} : ${strengthText}</div>`;
+    resultHTML += `<div style="font-size: 0.95rem; margin-bottom: 6px; color: #333;">${crackTimeLabel} ${crackTime}</div>`;
+    resultHTML += `<div style="font-size: 0.78rem; margin-bottom: 10px; color: #666;">${attackNote}</div>`;
 
     if (feedback.length > 0) {
       resultHTML += `<div style="font-size: 0.9rem; margin-top: 8px; padding: 12px; background: rgba(0,0,0,0.05); border-radius: 8px;">`;
@@ -468,6 +548,8 @@ const translations = {
       noCommon: "Évitez les mots courants (password, admin, etc.)",
       improvementsNeeded: "À améliorer :",
     },
+    crackTimeLabel: "Temps estimé pour cracker :",
+    attackNote: "Selon une attaque de force brute standard.",
     securityTitle: "Conseils de sécurité",
     securityDescription:
       "Un bon mot de passe doit contenir : des majuscules, des minuscules, des chiffres et des caractères spéciaux.",
@@ -571,6 +653,8 @@ const translations = {
       noCommon: "Avoid common words (password, admin, etc.)",
       improvementsNeeded: "Improvements needed:",
     },
+    crackTimeLabel: "Estimated time to crack:",
+    attackNote: "Based on a standard brute-force attack.",
     securityTitle: "Security Tips",
     securityDescription:
       "A good password should contain: uppercase letters, lowercase letters, numbers and special characters.",
@@ -674,6 +758,8 @@ const translations = {
       noCommon: "Vermeiden Sie häufige Wörter (password, admin, usw.)",
       improvementsNeeded: "Verbesserungen erforderlich:",
     },
+    crackTimeLabel: "Geschätzte Knackdauer:",
+    attackNote: "Basierend auf einem Standard-Brute-Force-Angriff.",
     securityTitle: "Sicherheitstipps",
     securityDescription:
       "Ein gutes Passwort sollte enthalten: Großbuchstaben, Kleinbuchstaben, Zahlen und Sonderzeichen.",
@@ -777,6 +863,8 @@ const translations = {
       noCommon: "Evite palabras comunes (password, admin, etc.)",
       improvementsNeeded: "Mejoras necesarias:",
     },
+    crackTimeLabel: "Tiempo estimado para descifrar:",
+    attackNote: "Según un ataque de fuerza bruta estándar.",
     securityTitle: "Consejos de seguridad",
     securityDescription:
       "Una buena contraseña debe contener: letras mayúsculas, letras minúsculas, números y caracteres especiales.",
@@ -880,6 +968,8 @@ const translations = {
       noCommon: "Evita parole comuni (password, admin, ecc.)",
       improvementsNeeded: "Miglioramenti necessari:",
     },
+    crackTimeLabel: "Tempo stimato per decifrare:",
+    attackNote: "Secondo un attacco brute force standard.",
     securityTitle: "Consigli di sicurezza",
     securityDescription:
       "Una buona password deve contenere: lettere maiuscole, lettere minuscole, numeri e caratteri speciali.",
@@ -983,6 +1073,8 @@ const translations = {
       noCommon: "Evite palavras comuns (password, admin, etc.)",
       improvementsNeeded: "Melhorias necessárias:",
     },
+    crackTimeLabel: "Tempo estimado para quebrar:",
+    attackNote: "Com base em um ataque de força bruta padrão.",
     securityTitle: "Dicas de segurança",
     securityDescription:
       "Uma boa senha deve conter: letras maiúsculas, letras minúsculas, números e caracteres especiais.",
@@ -1086,6 +1178,8 @@ const translations = {
       noCommon: "Vermijd veelgebruikte woorden (password, admin, enz.)",
       improvementsNeeded: "Verbeteringen nodig:",
     },
+    crackTimeLabel: "Geschatte tijd om te kraken:",
+    attackNote: "Gebaseerd op een standaard brute-force-aanval.",
     securityTitle: "Veiligheidstips",
     securityDescription:
       "Een goed wachtwoord moet bevatten: hoofdletters, kleine letters, nummers en speciale tekens.",
@@ -1189,6 +1283,8 @@ const translations = {
       noCommon: "Strivout gerzoù a veheñg (password, admin, arl.)",
       improvementsNeeded: "Gwellañ a zo ezhomm:",
     },
+    crackTimeLabel: "Amzer estimet da c'houllan :",
+    attackNote: "Dre an dorn d’ar c’houll an nerzh grawañ standard.",
     securityTitle: "Alvelennoù ruzh",
     securityDescription:
       "Ur geriadur mat a rankfe kaout : lizherennoù bras, lizherennoù bihan, niverou ha arzoù special.",
