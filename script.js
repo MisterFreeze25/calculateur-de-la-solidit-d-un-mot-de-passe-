@@ -7,12 +7,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const toggle = document.getElementById("togglePassword");
 
   function checkStrength(password) {
+    // Uniformiser le mot de passe pour repérer les mots même avec des accents ou des séparateurs.
     const normalized = password
       .normalize("NFD")
       .replace(/[\\u0300-\\u036f]/g, "")
       .toLowerCase();
     const compactPassword = normalized.replace(/[^a-z0-9]/g, "");
     const currentYear = new Date().getFullYear();
+    // Une année récente suivie d'un symbole est un motif très fréquent dans les mots de passe humains.
     const recentYearPattern = new RegExp(
       `(19|20)(?:${String(currentYear).slice(2)}|${String(currentYear - 1).slice(2)}|${String(currentYear + 1).slice(2)})$`,
     );
@@ -43,9 +45,10 @@ document.addEventListener("DOMContentLoaded", () => {
       recentYearPattern.test(compactPassword) &&
       hasFinalSymbol;
 
-    // zxcvbn estimates the guessability of human-created passwords.
+    // zxcvbn estime le nombre d'essais nécessaires pour casser un mot de passe humain.
     const zxcvbnScore =
       typeof window.zxcvbn === "function" ? window.zxcvbn(password).score : null;
+    // Ce calcul de secours fonctionne même si la bibliothèque CDN est indisponible.
     const characterClasses = [
       /[a-z]/.test(normalized),
       /[A-Z]/.test(password),
@@ -62,10 +65,12 @@ document.addEventListener("DOMContentLoaded", () => {
             : password.length >= 8 && characterClasses >= 2
               ? 1
               : 0;
+    // Le motif prévisible reste prioritaire, quelle que soit la longueur du mot de passe.
     const score = predictableHumanPattern
       ? 0
       : zxcvbnScore ?? fallbackScore;
 
+    // Conserver les mêmes états d'affichage qu'avant : très faible à très fort.
     return ["veryWeak", "weak", "medium", "strong", "veryStrong"][score];
   }
 
