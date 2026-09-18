@@ -7,45 +7,66 @@ document.addEventListener("DOMContentLoaded", () => {
   const toggle = document.getElementById("togglePassword");
 
   function checkStrength(password) {
-    let score = 0;
+    const normalized = password
+      .normalize("NFD")
+      .replace(/[\\u0300-\\u036f]/g, "")
+      .toLowerCase();
+    const compactPassword = normalized.replace(/[^a-z0-9]/g, "");
+    const currentYear = new Date().getFullYear();
+    const recentYearPattern = new RegExp(
+      `(19|20)(?:${String(currentYear).slice(2)}|${String(currentYear - 1).slice(2)}|${String(currentYear + 1).slice(2)})$`,
+    );
+    const commonWords = [
+      "je",
+      "suis",
+      "le",
+      "la",
+      "les",
+      "un",
+      "une",
+      "pere",
+      "mere",
+      "noel",
+      "bonjour",
+      "password",
+      "admin",
+      "welcome",
+      "football",
+      "iloveyou",
+    ];
+    const commonWordCount = commonWords.filter((word) =>
+      compactPassword.includes(word),
+    ).length;
+    const hasFinalSymbol = /[^a-z0-9]$/.test(normalized);
+    const predictableHumanPattern =
+      commonWordCount >= 2 &&
+      recentYearPattern.test(compactPassword) &&
+      hasFinalSymbol;
 
-    // Longueur - critère principal
-    if (password.length >= 8) score += 1;
-    if (password.length >= 12) score += 1;
-    if (password.length >= 16) score += 1;
-    if (password.length >= 20) score += 1;
+    // zxcvbn estimates the guessability of human-created passwords.
+    const zxcvbnScore =
+      typeof window.zxcvbn === "function" ? window.zxcvbn(password).score : null;
+    const characterClasses = [
+      /[a-z]/.test(normalized),
+      /[A-Z]/.test(password),
+      /[0-9]/.test(password),
+      /[^a-z0-9]/i.test(password),
+    ].filter(Boolean).length;
+    const fallbackScore =
+      commonWordCount > 0 || /(.)\1{2,}/.test(password)
+        ? 1
+        : password.length >= 20 && characterClasses >= 3
+          ? 3
+          : password.length >= 12 && characterClasses >= 3
+            ? 2
+            : password.length >= 8 && characterClasses >= 2
+              ? 1
+              : 0;
+    const score = predictableHumanPattern
+      ? 0
+      : zxcvbnScore ?? fallbackScore;
 
-    // Diversité des caractères
-    if (/[A-Z]/.test(password)) score += 1;
-    if (/[a-z]/.test(password)) score += 1;
-    if (/[0-9]/.test(password)) score += 1;
-    if (/[^A-Za-z0-9]/.test(password)) score += 1;
-
-    // Points supplémentaires pour caractères spéciaux multiples
-    if (/[^A-Za-z0-9]/.test(password) && password.length >= 12) {
-      score += 1;
-    }
-
-    // Pénalité pour patterns faibles
-    if (/^[0-9]{4,}$/.test(password)) score -= 2;
-    if (/(.)\\1{2,}/.test(password)) score -= 1;
-    if (/password|123|abc|admin|qwerty/i.test(password)) score -= 2;
-
-    // S'assurer que le score est entre 0 et 10
-    score = Math.max(0, Math.min(10, score));
-
-    // Convertir le score numérique en force
-    if (score <= 2) {
-      return "veryWeak";
-    } else if (score <= 4) {
-      return "weak";
-    } else if (score <= 6) {
-      return "medium";
-    } else if (score <= 8) {
-      return "strong";
-    } else {
-      return "veryStrong";
-    }
+    return ["veryWeak", "weak", "medium", "strong", "veryStrong"][score];
   }
 
   function getPasswordFeedback(password) {
