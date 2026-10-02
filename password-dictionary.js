@@ -102,6 +102,140 @@ window.PasswordDictionary = (() => {
     traum treppe treue uberraschung uhr umgebung urlaub ursache vater vergnugen
     verkehr versicherung versprechen vertrauen verwaltung vogel vollmond vorstellung wald
     wand wasser weihnachten wein welt wert wetter woche wohnung zeichen zeit zeitung
+    abenteuer abholung abschluss absicht abteilung abwechslung achtung adresse adresseingabe
+    akademie aktion aktualisierung alphabet anbieter anforderung angabe angelegenheit angewohnheit
+    anhang ankunft anlage anmeldung anordnung anruf ansicht anspannung antrag anwendung anwesen
+    apotheke architekt archiv argument arztpraxis aufenthalt aufgabe aufmerksamkeit aufnahme auftrag
+    auftritt aufzahlung ausbildung ausdruck ausflug auskunft ausland ausstellung auswahl auswirkung
+    auszahlung bahnhof balkon bandage bankkonto baustelle bedarf bedeutung bedingung begabung begleitung
+    begriff begrundung behorde behorden beibehaltung beitrag bekanntschaft berechnung bericht beratung
+    bereich bereicherung beruf beschaftigung beschaftigte besitzer bestand bestellung beteiligung betrieb
+    bewegung bewerbung bewertung bezahlung bildschirm bildung bitte blatt boden brett brief briefkasten
+    brille bruder buchhandlung buchstabe bundestag burgerschaft burgersaal burgerservice buchhaltung
+    dabei dachboden dankbarkeit darstellung datei datenbank datensatz datenschutz dauer decke deckel
+    definition detail dialog dienst dienstag dienstleistung dokument dokumentation doppelzimmer dorf
+    dorfplatz drucker druckerei durchblick durchgang durchgangigkeit durchfuhrung durchmesser dusche
+    einarbeitung einbahn einblick einbruch einfall einfluss einfuhrung eingang eingabe eingangshalle
+    eingelegenheit eingemeindung eingriff einhaltung einheit einkauf einladung einkommen einrichtung
+    einstellung eintritt einwohner einzelhandel einzelheit einzelzimmer einzahlung empfehlung empfindung
+    endergebnis energieverbrauch entscheidung entdeckung entwicklung entwurf entwicklungshilfe erbe
+    ereignis ergebnis erlebnis eroberung erzahlung erzielung erziehung fachgebiet fachhandel fachkraft
+    fachwissen fahrbahn fahrkarte fahrplan fahrzeug fallschirm familienname familienstand farbe feierabend
+    feiertag feldweg fernbedienung fernfahrer fernseher fernsehen festigkeit festplatte feststellung
+    finanzamt finanzierung finanzplan firmenname flachland flaschenpost fleischerei flughafen flugblatt
+    flugzeug forderung forschung fortbildung fortschritt fotografie fragebogen fragestellung freiberufler
+    freizeit freundlichkeit friedhof fuhrerschein fuhrungskraft fuhrungszeugnis fußboden gebaude gebirge
+    gedachtnis gedanken gegenstand gegenwart geheimnis gelegenheit gemeinsamkeit gemeinschaft gemeinde
+    gerechtigkeit geschwindigkeit geschwister gesellschaft geschaft geschaftsfuhrung geschenk gesundheit
+    gesichtspunkt gewohnheit gleichgewicht gleichheit glucklichkeit grundlage grundstuck grundung handarbeit
+    handbuch handlung hauptbahnhof hauptstadt herausforderung herkunft herstellung hilfsbereitschaft hinweis
+    hintergrund hochschule hochzeit hoffentlich holzhandlung hotelzimmer jahreszeit jahresabschluss
+    jahresbericht jahresende jahreskarte jahreswechsel jugendherberge jugendliche jugendzeit kinderbuch
+    kindergeld kindergarten kinderzimmer kindheit kirchengemeinde klassenarbeit kleiderschrank kleinigkeit
+    klimaschutz kommunikation konversation korperpflege krankenschwester kreativitat kunstwerk landkarte
+    landwirtschaft lebensmittel lebensversicherung lebensweise lehrerin lehrgang lehrkraft lehrstuhl
+    leistungsergebnis lieblingsfarbe lieblingsessen lieblingsfach lieblingsfilm lieblingslied lieblingsort
+    lieblingsplatz lieblingssport lieblingsspiel lieblingstag lieblingswort lieferant lieferung liegenschaft
+    menschenrecht menschlichkeit meisterschaft mitarbeiter mittagessen mitternacht nachbarschaft nachfrage
+    nachrichtendienst nachmittagshimmel nachschlagewerk naturwissenschaft notfallnummer oberflache obergeschoss
+    oberleitung oberstufe offentlichkeit offentlicher ordner ordnungskraft ortschaft partnerschaft passworter
+    preisverleihung pressefreiheit produktivitat qualitatskontrolle qualitatsstandard quellenangabe rathaus
+    rechtsanwalt rechtschreibung rechtswissenschaft reisebericht reisegesellschaft reiseversicherung
+    reinigungskraft reisepass reisetasche rettungsdienst rettungsschwimmer richtungsanzeige ruckmeldung
+    rucksichtnahme sammelstelle sachlichkeit schauspieler schauspielerin schadensersatz schattenseite
+    schlafzimmer schlussverkauf schneeflocke schneiderin schreibmaschine schreibwaren schulbildung schulbuch
+    schulausflug schulfreund schuljahr schulleitung schulmeister schulpause schulweg schwangerschaft
+    selbstbewusstsein selbststandigkeit sicherheitsdienst sicherheitsgurt sicherheitskontrolle sicherheitskopie
+    sicherheitsmassnahme sicherheitsnummer sonnenaufgang sonnenblume sonnenbrille sonnencreme sonnenlicht
+    sonnenschein sonnenuntergang sonderangebot sonderausgabe sonderfall sonderzeichen sozialarbeit
+    sozialarbeiter sozialisierung sozialversicherung sprachkenntnis sprachunterricht staatsangehorigkeit
+    staatsanwaltschaft stellvertreter steuerberater steuererklarung steuerfreiheit steuerrecht steuerung
+    steuerzahlung stimmzettel stundenplan studentenwohnheim studienabschluss studienanfanger studienarbeit
+    studienberatung studiengebuhr studienjahr studienleistung studienplatz studienreise studienrichtung
+    studienzeit suchmaschine supermarktkasse tagesablauf tageslicht tagesordnung tageszeitung taschenlampe
+    teilnehmer telefonnummer terminkalender tiefgarage tierarztpraxis tiergarten tischdecke tochtergesellschaft
+    todesanzeige todesursache tonaufnahme tonstudio traumhaus traumreise traumurlaub treppenhaus umfrage
+    umgebungskarte umweltbewusstsein umweltschutz unterhaltung unterkunft unternehmen unterrichtsstunde
+    unterschrift unterwasserbahn urlaubsantrag urlaubsbeginn urlaubsfoto urlaubsplanung urlaubsreise
+    urlaubszeit ursprung verabredung veranstaltung vereinbarung verfassung verhaltensweise verkehrsmittel
+    verkehrssicherheit verkehrszeichen verkaufsgesprach vermieter vermutung vernehmung verstandnis verstarkung
+    vertrauensperson verwaltungskosten verwaltungsrat verwaltungsweg verwunderung volkswagen vorbereitung
+    vorbestellung vorentscheidung vorfahrt vorfreude vorgang vorhaben vorlesung vorschlag vorschrift vorsorge
+    vollzeitbeschaftigung vorname wahrnehmung wahlberechtigung wahlentscheidung wahlkampf wahlprogramm
+    waldspaziergang wasserfall wasserflasche wasserhahn wasserleitung wasserversorgung weihnachtsabend
+    weihnachtsbaum weihnachtsfeier weihnachtsgeschenk weihnachtsmann weihnachtspaket weihnachtszeit
+    weiterbildung weltanschauung weltgeschichte weltkarte weltmeister weltmeisterschaft weltreise wettbewerb
+    wetterbericht wettervorhersage wichtigkeit widerspruch wiederholung wiedervereinigung willensfreiheit
+    wirtschaft wirtschaftskraft wirtschaftsleben wirtschaftspolitik wirtschaftswachstum wissenschaftler
+    wissenschaftlerin wohngegend wohnungsbau wohnungsmarkt wohnungsnot wohnungssuche wohnzimmer wortbildung
+    worterbuch wortschatz wortstellung wortwahl zeitgeschichte zeitgenosse zeitgeist zeitmanagement zeitschrift
+    zeitzone zielgruppe
+    ability absence absolute academic account accuracy achievement acknowledgement acquisition adaptation
+    addition administration advantage advertisement advice affection agency agenda agreement agriculture
+    aircraft airline airport album alternative ambition analysis ancestor announcement anxiety apology
+    appearance appetite appreciation approval architecture arrangement arrival assistance atmosphere attempt
+    attention attitude audience authority awareness awareness background balance basketball bedroom behavior
+    belief benefit bicycle biology birthday blanket boundary breakfast brother building butterfly cabinet
+    calendar campaign candidate capacity capital captain careful celebration celebration century ceremony
+    challenge championship character charity chemistry childhood chocolate christmas civilization climate
+    clothing collection comfort command commitment communication comparison compassion competition complaint
+    conclusion confidence connection consciousness consideration consistency construction content context
+    contribution conversation cooperation courage creativity criticism culture customer daughter deadline
+    decision delivery democracy department description design destination development difference difficulty
+    direction disaster discovery discussion distance education electricity employee employment energy engineer
+    entertainment enthusiasm environment equality equipment error essential evening examination example
+    exchange excitement exercise existence expectation experience experiment explanation expression failure
+    familiar family favorite feature feedback feeling festival finance fireplace flight football friendship
+    function furniture gallery generation geography girlfriend government grandfather grandmother grocery
+    guidance happiness hardware headline hearing history holiday honesty hospital household husband identity
+    imagination importance improvement independence industry influence ingredient initiative instruction
+    insurance intelligence intention interaction interest internet introduction invention invitation january
+    journey judgment knowledge language laughter leadership learning legislation library lifestyle lightning
+    location magazine maintenance management manager marketing marriage mathematics meaning measurement
+    medicine member memory message midnight military million minister miracle mistake mixture monday movement
+    musician mystery narrative nation nature necessity neighbor newspaper november occasion october operation
+    opportunity organization original painting paragraph parent partnership passenger patience payment performance
+    permission personality photograph physical piano picture pleasure pocket population position possibility
+    practice preference preparation presence president pressure priority privacy problem procedure process
+    product profession professor program progress promise promotion property proposal protection purpose
+    quality quantity question quotation reaction reading reality reason receipt recipe recognition relationship
+    religion reminder restaurant retirement revolution reward rhythm safety saturday scenery schedule science
+    season secretary security selection september sentence service session shoulder signature situation society
+    solution something speaker species special standard station stomach strategy strength structure student
+    substance success suggestion summer sunlight sunday surprise swimming sympathy system teaching teenager
+    temperature temporary theater theatre thursday tonight tradition traffic training travel treatment triangle
+    trouble tuesday umbrella understanding university vacation vegetable vehicle victory video village violence
+    visitor volunteer wallpaper warning wedding weekend western whatever wholesale willingness window winner
+    wisdom wonderful worker yesterday youngster yourself
+    abeja abogado abrazo academia accidente aceite actividad acuerdo admiracion aeropuerto alegria alquiler
+    amistad anuncio apariencia aprendizaje archivo argumento artista asistencia asunto atencion autobus
+    autoridad aventura belleza beneficio biblioteca calidad camino capacidad capital capitulo caracter
+    carino celebracion cerveza ciudad cliente comienzo companero compania competencia comprension conclusion
+    confianza conocimiento consecuencia continente contrato conversacion corazon corriente crecimiento
+    cuidado decision diciembre diferencia dificultad direccion disciplina descubrimiento educacion electricidad
+    empleado energia enfermedad ensayo entrada entrevista equilibrio escenario espacio especie esperanza
+    estacion estudiante examen excelencia existencia explicacion expresion extranjero facilidad felicidad
+    fotografia funcionario herramienta humanidad importancia impuesto incendio industria influencia ingrediente
+    iniciativa institucion instrumento inteligencia interaccion interes invierno investigacion jardinero laboratorio
+    lanzamiento lectura libertad literatura mantenimiento manera maquillaje matrimonio medicina mensaje millon
+    misterio movimiento nacimiento naturaleza necesidad negocio noviembre objetivo obligacion observacion
+    oportunidad organizacion origen paciencia paisaje palabra pelicula pensamiento porcentaje personaje permiso
+    personalidad perspectiva poblacion posibilidad posicion practica pregunta presencia presidente presupuesto
+    principio problema procedimiento producto profesion programa progreso promesa proteccion provincia proyecto
+    publicidad realidad razonamiento recuerdo referencia reflexion relacion rendimiento reunion riqueza seguridad
+    sentimiento septiembre servicio situacion sociedad solucion sorpresa trabajador tradicion transporte universidad
+    variedad vegetacion velocidad visitante voluntad zapateria zapatero
+    abbraccio accoglienza attenzione avventura bellezza biblioteca capacita carattere celebrazione cittadino
+    civilta colazione commercio compagnia comprensione comunicazione conoscenza conseguenza costruzione
+    conversazione coraggio creativita decisione dicembre differenza difficolta direzione educazione elettricita
+    emozione esperienza espressione felicita fotografia gentilezza giardino giornale giustizia illuminazione
+    immaginazione importanza indipendenza industria informazione intelligenza interazione interesse inverno
+    investimento occasione ottobre organizzazione opportunita operazione opinione orchestra pazienza paesaggio
+    partecipazione passione pensione personalita possibilita preferenza preparazione presentazione presidente
+    principio probabilita professione progresso protezione pubblicazione qualita quantita questione ragione
+    riconoscimento relazione responsabilita ristorante rivoluzione sicurezza situazione societa soluzione
+    soddisfazione solidarieta sorpresa stazione studente settimana tecnologia televisione tradizione trattamento
+    tranquillita universita verita velocita vittoria
     `
     .trim()
     .split(/\s+/)
@@ -121,7 +255,6 @@ window.PasswordDictionary = (() => {
     .split(/\s+/)
     .map((password) => normalize(password));
 
-  const guessesByPattern = new Map();
   const suffixes = [
     "1",
     "12",
@@ -151,37 +284,62 @@ window.PasswordDictionary = (() => {
       .replace(/[^a-z0-9]/g, "");
   }
 
-  function add(pattern, guesses) {
-    const normalized = normalize(pattern);
-    if (!normalized) return;
-    const previous = guessesByPattern.get(normalized);
-    if (previous === undefined || guesses < previous) {
-      guessesByPattern.set(normalized, guesses);
-    }
-  }
-
-  commonPasswords.forEach((password, index) => add(password, index + 1));
-
-  roots.forEach((word, index) => {
-    add(word, 10_000 + index * 100);
-    suffixes.forEach((suffix, suffixIndex) => {
-      add(`${word}${suffix}`, 50_000 + index * 200 + suffixIndex * 100);
-    });
-  });
-
-  roots.forEach((firstWord, firstIndex) => {
-    roots.forEach((secondWord, secondIndex) => {
-      const rank = firstIndex * roots.length + secondIndex;
-      add(`${firstWord}${secondWord}`, 1_000_000 + rank * 500);
-    });
-  });
+  const wordRanks = new Map(roots.map((word, index) => [word, index + 1]));
+  const passwordRanks = new Map(
+    commonPasswords.map((password, index) => [password, index + 1]),
+  );
 
   function getGuessEstimate(password) {
-    return guessesByPattern.get(normalize(password)) ?? null;
+    const normalized = normalize(password);
+    if (!normalized) return null;
+
+    let bestGuessCount = passwordRanks.get(normalized) ?? Infinity;
+    const rootRank = wordRanks.get(normalized);
+    if (rootRank !== undefined) {
+      bestGuessCount = Math.min(bestGuessCount, 10_000 + (rootRank - 1) * 100);
+    }
+
+    suffixes.forEach((suffix, suffixIndex) => {
+      const normalizedSuffix = normalize(suffix);
+      if (!normalizedSuffix || !normalized.endsWith(normalizedSuffix)) return;
+
+      const baseWord = normalized.slice(0, -normalizedSuffix.length);
+      const baseRank = wordRanks.get(baseWord);
+      if (baseRank !== undefined) {
+        bestGuessCount = Math.min(
+          bestGuessCount,
+          50_000 + (baseRank - 1) * 200 + suffixIndex * 100,
+        );
+      }
+    });
+
+    const combinations = Array(normalized.length + 1).fill(Infinity);
+    combinations[0] = 1;
+    for (let end = 1; end <= normalized.length; end++) {
+      for (let start = Math.max(0, end - 24); start < end; start++) {
+        const rank = wordRanks.get(normalized.slice(start, end));
+        if (rank === undefined || !Number.isFinite(combinations[start])) continue;
+
+        const wordGuesses = 10_000 + (rank - 1) * 100;
+        const combinedGuesses =
+          start === 0
+            ? wordGuesses
+            : Math.min(1e300, combinations[start] * wordGuesses);
+        combinations[end] = Math.min(combinations[end], combinedGuesses);
+      }
+    }
+
+    bestGuessCount = Math.min(
+      bestGuessCount,
+      combinations[normalized.length],
+    );
+    return Number.isFinite(bestGuessCount) ? bestGuessCount : null;
   }
 
   return {
     getGuessEstimate,
-    patternCount: guessesByPattern.size,
+    patternCount:
+      commonPasswords.length + roots.length * (roots.length + suffixes.length + 1),
+    wordCount: roots.length,
   };
 })();
