@@ -1,5 +1,11 @@
 window.PasswordDictionary = (() => {
   const roots = [...new Set(`
+    password welcome admin qwerty azerty bonjour bienvenue secret amour soleil
+    football dragon coucou loulou chouchou marseille france paris hello love
+    mon amour famille maman papa chien chat chocolat chevalier printemps
+    motdepasse passwort wachtwoord contrasena tequiero senha
+    tequiero contrasena senha passwort wachtwoord iloveyou letmein sunshine
+    monkey princess michael shadow master superman football baseball freedom
     amour ami animal arbre arc-en-ciel argent armee bateau bebe bijou bonheur
     bonjour cadeau campagne canada capitale chanson chat cheval chien chocolat
     ciel cinema coeur couleur cuisine danse dauphin dimanche dragon ecole enfant
@@ -183,9 +189,9 @@ window.PasswordDictionary = (() => {
     dimanche direction directeur disque distance distributeur divertissement document
     economie ecureuil editeur elegance electricien emballage embrassade emplacement
     emprunt encre enregistrement enseignement entreprise epicerie equipement escalier
-    escargot espaceur evenement evolution excursion fabrication facteurie falaise
-    fantaisie fauteuil fiancee fillette fleuriste footballiste formulaire fourchette
-    fournisseur framboise friteuse fromageage fruitier fusible galop garantie gardien
+    escargot evenement evolution excursion fabrication falaise fantaisie fauteuil
+    fiancee fillette fleuriste formulaire fourchette fournisseur framboise friteuse
+    fruitier fusible galop garantie gardien
     gastronomie gazette geographie gestionnaire girafe gouvernail grammaire grenouille
     grimace guirlande habitation harmonie herisson horloger immeuble imprimeur
     incendie indication industrie informatique instrument intelligence invitation
@@ -305,9 +311,25 @@ window.PasswordDictionary = (() => {
     .trim()
     .split(/\s+/)
     .map((word) => normalize(word))
-    .filter((word) => word.length >= 4))];
+    .filter((word) => word.length >= 4 && /^[a-z]+$/.test(word)))];
 
-  const commonPasswords = `
+  const commonPasswords = [
+    ...new Set(`
+    123456 123456789 12345678 12345 1234567 1234567890 123123 111111 000000
+    123321 654321 112233 121212 777777 666666 555555 999999 888888 1234 12345678910
+    password password1 password123 password1234 passw0rd p@ssw0rd qwerty qwerty123
+    qwertyuiop 1q2w3e4r 1qaz2wsx qazwsx asdfgh zxcvbn abc123 iloveyou letmein
+    welcome welcome1 admin admin123 root guest login changeme secret trustno1
+    sunshine dragon monkey football baseball soccer princess michael shadow master
+    superman whatever freedom starwars matrix hello love jesus access flower
+    mustang jordan harley robert daniel ashley jessica charlie thomas hunter
+    passwort passwort123 hallo schatz willkommen wachtwoord welkom voetbal
+    azerty azertyuiop motdepasse motdepasse1 bonjour bienvenue coucou soleil
+    marseille france paris loulou toto maman papa amour cheval chocolat famille
+    contrasena tequiero princesa futbol hola hola123 amor amigo verano
+    senha brasil futebol amor123 meuamor deus portugal
+    ciao amore tiamo buongiorno napoli roma italia
+    breizh bretagne
     123456 123456789 12345678 12345 1234567 1234567890 password password1
     123123 111111 000000 abc123 qwerty qwerty123 1q2w3e4r admin admin123
     letmein welcome welcome1 monkey dragon sunshine iloveyou princess football
@@ -318,7 +340,8 @@ window.PasswordDictionary = (() => {
     `
     .trim()
     .split(/\s+/)
-    .map((password) => normalize(password));
+    .map((password) => normalize(password))),
+  ];
 
   const suffixes = [
     "1",
@@ -328,17 +351,7 @@ window.PasswordDictionary = (() => {
     "12345",
     "!",
     "@",
-    "2020",
-    "2021",
-    "2022",
-    "2023",
-    "2024",
-    "2025",
-    "2026",
-    "2027",
-    "2028",
-    "2029",
-    "2030",
+    ...Array.from({ length: 46 }, (_, index) => String(1990 + index)),
   ];
 
   function normalize(value) {
