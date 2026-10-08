@@ -1291,3 +1291,110 @@ h2 {
   animation: titlePulse 0.8s ease-out;
   text-shadow: 0 0 20px rgba(102, 126, 234, 0.2);
 }
+
+/* Mise en page unifiée, sans halos décoratifs */
+:root {
+  --surface: rgba(17, 24, 39, 0.94);
+  --panel-width: 760px;
+}
+
+body {
+  background: var(--background);
+  background-attachment: scroll;
+}
+
+body::before,
+body::after {
+  content: none;
+  display: none;
+}
+
+.container,
+header,
+footer,
+.security-dock {
+  width: 100%;
+  max-width: var(--panel-width);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  box-shadow: none;
+}
+
+.container,
+header,
+footer,
+.security-dock {
+  border-radius: 8px;
+}
+
+.container::before {
+  content: none;
+  display: none;
+}
+
+.container:hover,
+.security-dock:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.security-dock {
+  transition: none;
+}
+
+button:not(#togglePassword) {
+  box-shadow: none;
+}
+
+button:not(#togglePassword)::before,
+.security-link::before {
+  display: none;
+}
+
+button:not(#togglePassword):hover,
+.security-link:hover {
+  transform: none;
+  box-shadow: none;
+  filter: brightness(1.08);
+}
+
+#results:not(:empty) {
+  animation: none;
+}
+
+@media (max-width: 560px) {
+  body {
+    padding: 12px;
+  }
+
+  .container {
+    margin: 20px auto;
+    padding: 24px 18px;
+  }
+
+  main.container > .password-field + div {
+    flex-direction: column;
+    gap: 10px !important;
+  }
+
+  main.container > .password-field + div button {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body {
+    background: var(--background) !important;
+  }
+}
+
+header {
+  column-gap: 24px;
+}
+
+footer {
+  column-gap: 36px;
+  row-gap: 20px;
+}
